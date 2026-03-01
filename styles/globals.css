@@ -13,6 +13,11 @@
   --line-height: 1.75em;
 
   /* Отступы */
+  --container-pad: 12px;
+  
+
+  /* Линии */
+  --border: 1px solid var(--color-line);
 }
 
 body {
@@ -29,4 +34,11 @@ h3,
 h4 {
   color: var(--color-heading);
   font-family: var(--font-oswald), system-ui, sans-serif;
+}
+
+.site {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
