@@ -1,0 +1,32 @@
+@import "./reset.css";
+
+:root {
+  /* Цвета */
+  --color-bg: #ffffff;
+  --color-accent: #c5a47e;
+  --color-line: rgba(0, 0, 0, 0.05);
+  --color-heading: #1b1b1b;
+  --color-text: #777;
+
+  /* Типографика */
+  --font-size: 15px;
+  --line-height: 1.75em;
+
+  /* Отступы */
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-heading);
+  font-family: var(--font-oswald), system-ui, sans-serif;
+}
