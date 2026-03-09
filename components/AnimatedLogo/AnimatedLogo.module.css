@@ -1,0 +1,17 @@
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+[data-anim="draw"] path,
+[data-anim="draw"] rect,
+[data-anim="draw"] polygon,
+[data-anim="draw"] polyline,
+[data-anim="draw"] line,
+[data-anim="draw"] ellipse,
+[data-anim="draw"] circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+}

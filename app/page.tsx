@@ -1,11 +1,12 @@
-import { AnimatedLink } from "@/shared/AnimatedLink/AnimatedLink";
+import { AnimatedLogo } from "@/components/AnimatedLogo/AnimatedLogo";
+import { TestS } from "@/components/TestS/TestS";
 import { Container } from "@/shared/Container/Container";
 
 export default function Home() {
   return (
     <main>
       <Container>
-        <AnimatedLink href ="/">suvorova project</AnimatedLink>        
+        <TestS/>           
       </Container>
     </main>
   );
