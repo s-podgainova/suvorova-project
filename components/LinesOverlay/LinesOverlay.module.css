@@ -1,17 +1,20 @@
 .overlay {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 
 .inner {
   position: absolute;
-  inset: 0;
-  max-width: 1140px;
-  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1140px;
   border-right: var(--border);
   border-bottom: var(--border);
-  border-left: var(--border);
+  border-left: var(--border);  
+  transform: translateX(-50%);
 }
 
 .lines {
