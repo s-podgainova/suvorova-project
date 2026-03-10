@@ -1,0 +1,42 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 6px;
+  inline-size: 40px;
+  block-size: 40px;
+}
+
+.burger:hover span:nth-child(2) {
+  transform: scaleX(1);
+}
+
+.burger span {
+  height: 1px;
+  background-color: var(--color-burger);
+  transition: transform 0.3s ease;
+  inline-size: 30px;
+}
+
+.burger span:nth-child(2) {
+  transform: scaleX(0.66);
+  transform-origin: right;
+}
+
+.burger span {
+  width: 100%;
+  height: 2px;
+}
+
+.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}

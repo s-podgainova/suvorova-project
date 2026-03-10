@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat, Oswald } from "next/font/google";
 import "../styles/globals.css";
 import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
+import { ReactNode } from "react";
+import { Header } from "@/components/Header/Header";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
@@ -24,12 +26,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="ru">
       <body className={`${montserrat.variable} ${oswald.variable}`}>
         <div className="site">
+          <Header />
           <LinesOverlay />
           {children}
         </div>
