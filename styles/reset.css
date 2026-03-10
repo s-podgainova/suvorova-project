@@ -56,3 +56,7 @@ button {
   color: inherit;
   cursor: pointer;
 }
+
+ul {
+  list-style: none;
+}

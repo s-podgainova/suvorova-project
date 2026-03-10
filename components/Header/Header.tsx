@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
 import { useState } from "react";
+import { SideMenu } from "../SideMenu/SideMenu";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -15,20 +16,23 @@ export const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
-      <Container>
-        <div className={styles.inner}>
-          <Link href="/" className={styles.logo} aria-label="На главную">
-            <Image
-              src="/images/LogoHeader.svg"
-              alt="Suvorova Interior"
-              width={251}
-              height={60}
-            />
-          </Link>
-          <BurgerButton isOpen={isOpen} onClick={toggleMenu} />
-        </div>
-      </Container>
-    </header>
+    <>
+      <header className={styles.header}>
+        <Container>
+          <div className={styles.inner}>
+            <Link href="/" className={styles.logo} aria-label="На главную">
+              <Image
+                src="/images/LogoHeader.svg"
+                alt="Suvorova Interior"
+                width={250}
+                height={59}
+              />
+            </Link>
+            <BurgerButton isOpen={isOpen} onClick={toggleMenu} />
+          </div>
+        </Container>
+      </header>
+      <SideMenu isOpen={isOpen} />
+    </>
   );
 };
