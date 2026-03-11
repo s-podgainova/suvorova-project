@@ -25,5 +25,7 @@
 }
 
 .list > li:first-child {
-  text-transform: uppercase;
+  text-transform: uppercase;  
+  font-family: var(--font-raleway);
+  margin-bottom: 10px;
 }

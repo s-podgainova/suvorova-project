@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import { AnimatedLink } from "@/shared/AnimatedLink/AnimatedLink";
 import { menuItems } from "./menuData";
 import styles from "./SideMenu.module.css";
@@ -7,15 +8,19 @@ type SideMenuProps = {
 };
 
 export const SideMenu = ({ isOpen }: SideMenuProps) => {
+  const pathName = usePathname();
   return (
     <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
-      <nav aria-label="Main navigation">
+      <nav aria-label="Основная навигация">
         <ul className={styles.list}>
-          {menuItems.map((i) => (
-            <li key={i.href}>
-              <AnimatedLink href={i.href}>{i.label}</AnimatedLink>
-            </li>
-          ))}
+          {menuItems.map((i) => {
+            const isActive = pathName === i.href;
+            return (
+              <li key={i.href}>
+                <AnimatedLink href={i.href} active={isActive}>{i.label}</AnimatedLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>

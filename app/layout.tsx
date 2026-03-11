@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Oswald } from "next/font/google";
+import { Montserrat, Oswald, Raleway } from "next/font/google";
 import "../styles/globals.css";
 import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
 import { ReactNode } from "react";
@@ -17,6 +17,12 @@ const oswald = Oswald({
   variable: "--font-oswald",
 });
 
+const raleway = Raleway({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "700"],
+  variable: "--font-raleway",
+});
+
 export const metadata: Metadata = {
   title: "Соня Суворова — дизайнер интерьеров",
   description:
@@ -30,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${montserrat.variable} ${oswald.variable}`}>
+      <body
+        className={`${montserrat.variable} ${oswald.variable} ${raleway.variable}`}
+      >
         <div className="site">
           <Header />
           <LinesOverlay />

@@ -1,12 +1,12 @@
 "use client";
 
 import { Container } from "@/shared/Container/Container";
-import styles from "./Header.module.css";
-import Link from "next/link";
-import Image from "next/image";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
 import { useState } from "react";
 import { SideMenu } from "../SideMenu/SideMenu";
+import styles from "./Header.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,7 +23,7 @@ export const Header = () => {
             <Link href="/" className={styles.logo} aria-label="На главную">
               <Image
                 src="/images/LogoHeader.svg"
-                alt="Suvorova Interior"
+                alt="Логоти Suvorova Interior"
                 width={250}
                 height={59}
               />
