@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   gap: 6px;
   inline-size: 40px;
   block-size: 40px;
@@ -13,20 +13,15 @@
 }
 
 .burger span {
-  height: 1px;
   background-color: var(--color-burger);
   transition: transform 0.3s ease;
+  block-size: 1px;
   inline-size: 30px;
 }
 
 .burger span:nth-child(2) {
   transform: scaleX(0.66);
   transform-origin: right;
-}
-
-.burger span {
-  width: 100%;
-  height: 2px;
 }
 
 .open span:nth-child(1) {
