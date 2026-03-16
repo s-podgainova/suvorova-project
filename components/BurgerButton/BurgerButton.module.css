@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: flex-end;
   gap: 6px;
-  inline-size: 40px;
-  block-size: 40px;
+  inline-size: 45px;
+  block-size: 45px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -28,10 +28,9 @@
 .burger span:nth-child(2) {
   transform: scaleX(0.66);
   transform-origin: right;
-  height: 1px;
 }
 .open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);  
+  transform: translateY(7px) rotate(45deg);
 }
 
 .open span:nth-child(2) {
