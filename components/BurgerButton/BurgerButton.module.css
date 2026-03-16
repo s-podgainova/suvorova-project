@@ -1,4 +1,32 @@
+
 .burger {
+  position: relative;
+  inline-size: 44px;
+  block-size: 44px;
+}
+
+.burger span {
+  position: absolute;
+  right: 0;
+  inline-size: 30px;
+  block-size: 1px;
+  background-color: var(--color-burger);
+}
+
+.burger span:nth-child(1) {
+  top: 13px;
+}
+
+.burger span:nth-child(2) {
+  top: 19px;
+}
+
+.burger span:nth-child(3) {
+  top: 25px;
+}
+
+
+/* .burger {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,18 +34,18 @@
   gap: 6px;
   inline-size: 40px;
   block-size: 40px;
-}
+} */
 
 /* .burger:hover span:nth-child(2) {
   transform: scaleX(1);
 } */
 
-.burger span {
+/* .burger span {
   background-color: var(--color-burger);
   transition: transform 0.3s ease;
   block-size: 1px;
   inline-size: 30px;
-}
+} */
 
 /* .burger span:nth-child(2) {
   transform: scaleX(0.66);
