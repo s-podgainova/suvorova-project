@@ -1,32 +1,11 @@
 .burger {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 7px;
   inline-size: 44px;
   block-size: 44px;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-appearance: none;
-}
-
-.burger span {
-  position: absolute;
-  right: 0;
-  inline-size: 30px;
-  block-size: 1px;
-  background-color: var(--color-burger);
-  transition: transform 0.3s ease;
-}
-
-.burger span:nth-child(1) {
-  top: 13px;
-}
-
-.burger span:nth-child(2) {
-  top: 20px;
-  transform: scaleX(0.66);
-  transform-origin: right;
-}
-
-.burger span:nth-child(3) {
-  top: 27px;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -35,14 +14,23 @@
   }
 }
 
-@media (hover: none) and (pointer: coarse) {
-  .burger:active span:nth-child(2) {
-    transform: scaleX(1);
-  }
+.burger:active span:nth-child(2) {
+  transform: scaleX(1);
 }
 
+.burger span {
+  height: 1px;
+  background-color: var(--color-burger);
+  transition: transform 0.3s ease;
+  inline-size: 30px;
+}
+
+.burger span:nth-child(2) {
+  transform: scaleX(0.66);
+  transform-origin: right;
+}
 .open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .open span:nth-child(2) {
@@ -50,5 +38,5 @@
 }
 
 .open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
