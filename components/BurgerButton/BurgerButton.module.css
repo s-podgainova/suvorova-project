@@ -25,10 +25,12 @@
   inline-size: 30px;
 }
 
-.burger span:nth-child(2) {
+/* .burger span:nth-child(2) {
   transform: scaleX(0.66);
   transform-origin: right;
-}
+} */
+
+
 .open span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
