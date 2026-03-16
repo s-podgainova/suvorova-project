@@ -15,6 +15,10 @@ export const Header = () => {
     setIsOpen((prev) => !prev);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -32,7 +36,7 @@ export const Header = () => {
           </div>
         </Container>
       </header>
-      <SideMenu isOpen={isOpen} />
+      <SideMenu isOpen={isOpen} onClose={closeMenu}/>
     </>
   );
 };
