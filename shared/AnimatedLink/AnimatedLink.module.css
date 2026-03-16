@@ -1,6 +1,9 @@
 .fancy {
   position: relative;
   text-decoration: none;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .fancy::after {
@@ -20,4 +23,8 @@
 
 .fancy:hover::after {
   --scale: 1;
+}
+
+.fancy.active {
+  color: var(--color-accent);
 }

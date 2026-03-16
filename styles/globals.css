@@ -17,6 +17,10 @@
 
   /* Линии */
   --border: 1px solid var(--color-line);
+
+  /* Для отдельных компонентов */
+  --header-height: 100px;
+  --color-burger: #1b1b1b;
 }
 
 body {
@@ -43,5 +47,5 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 300vh;
 }
