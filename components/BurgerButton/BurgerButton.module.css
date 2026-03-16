@@ -39,6 +39,15 @@
   transform: scaleX(1);
 }
 
+.burger:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 4px;
+}
+
+.burger:focus {
+  outline: none;
+}
+
 .open .lineTop {
   transform: translateY(7px) rotate(45deg);
 }
