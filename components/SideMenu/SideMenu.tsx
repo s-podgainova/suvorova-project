@@ -11,13 +11,15 @@ export const SideMenu = ({ isOpen }: SideMenuProps) => {
   const pathName = usePathname();
   return (
     <div className={`${styles.menu} ${isOpen ? styles.open : ""}`}>
-      <nav aria-label="Основная навигация">
+      <nav aria-label="Основная навигация" id="site-menu">
         <ul className={styles.list}>
           {menuItems.map((i) => {
             const isActive = pathName === i.href;
             return (
               <li key={i.href}>
-                <AnimatedLink href={i.href} active={isActive}>{i.label}</AnimatedLink>
+                <AnimatedLink href={i.href} active={isActive}>
+                  {i.label}
+                </AnimatedLink>
               </li>
             );
           })}

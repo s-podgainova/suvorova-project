@@ -2,17 +2,25 @@
   position: fixed;
   right: 0;
   z-index: 900;
+  visibility: hidden;
   border-left: 1px solid rgba(255, 255, 255, 0.075);
   padding: 0 40px;
   background-color: var(--color-bg);
-  transition: transform 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    visibility 0s linear 0.3s;
   transform: translateX(100%);
+  pointer-events: none;
   block-size: 100dvh;
   inline-size: 340px;
 }
 
 .open {
   transform: translateX(0%);
+  visibility: visible;
+  transition:
+    transform 0.3s ease,
+    visibility 0s linear 0s;
 }
 
 .list {
@@ -25,7 +33,7 @@
 }
 
 .list > li:first-child {
-  text-transform: uppercase;  
-  font-family: var(--font-raleway);
   margin-bottom: 10px;
+  font-family: var(--font-raleway);
+  text-transform: uppercase;
 }

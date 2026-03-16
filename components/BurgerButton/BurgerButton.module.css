@@ -4,11 +4,17 @@
   justify-content: center;
   align-items: end;
   gap: 6px;
-  inline-size: 40px;
-  block-size: 40px;
+  inline-size: 44px;
+  block-size: 44px;
 }
 
-.burger:hover span:nth-child(2) {
+@media (hover: hover) and (pointer: fine) {
+  .burger:hover span:nth-child(2) {
+    transform: scaleX(1);
+  }
+}
+
+.burger:active span:nth-child(2) {
   transform: scaleX(1);
 }
 

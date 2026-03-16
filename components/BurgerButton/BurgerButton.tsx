@@ -12,6 +12,7 @@ export const BurgerButton = ({ isOpen, onClick }: BurgerButtonProps) => {
       onClick={onClick}
       aria-label="Открыть меню"
       aria-expanded={isOpen}
+      aria-controls="site-menu"
     >
       <span></span>
       <span></span>
