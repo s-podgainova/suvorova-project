@@ -24,9 +24,21 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Соня Суворова — дизайнер интерьеров",
+  title: "Suvorova interiors",
   description:
     "Портфолио дизайнера интерьеров Сони Суворовой. Реализованные проекты, концепции и авторский подход к созданию пространств.",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.svg",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-light.svg",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
