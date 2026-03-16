@@ -1,42 +1,52 @@
 .burger {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: end;
-  gap: 7px;
+  align-items: center;
   inline-size: 44px;
   block-size: 44px;
 }
 
+.icon {
+  overflow: visible;
+}
+
+.lineTop,
+.lineMiddle,
+.lineBottom {
+  stroke: var(--color-burger);
+  transition: transform 0.3s ease;
+  stroke-width: 1;
+  transform-box: fill-box;
+}
+
+.lineTop,
+.lineBottom {
+  transform-origin: center;
+}
+
+.lineMiddle {
+  transform: scaleX(0.66);
+  transform-origin: right;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .burger:hover span:nth-child(2) {
+  .burger:hover .lineMiddle {
     transform: scaleX(1);
   }
 }
 
-.burger:active span:nth-child(2) {
+.burger:active .lineMiddle {
   transform: scaleX(1);
 }
 
-.burger span {
-  height: 1px;
-  background-color: var(--color-burger);
-  transition: transform 0.3s ease;
-  inline-size: 30px;
+.open .lineTop {
+  transform: translateY(7px) rotate(45deg);
 }
 
-.burger span:nth-child(2) {
-  transform: scaleX(0.66);
-  transform-origin: right;
-}
-.open span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.open span:nth-child(2) {
+.open .lineMiddle {
   opacity: 0;
 }
 
-.open span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.open .lineBottom {
+  transform: translateY(-7px) rotate(-45deg);
 }
