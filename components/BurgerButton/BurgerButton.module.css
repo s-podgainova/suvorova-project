@@ -28,9 +28,10 @@
 .burger span:nth-child(2) {
   transform: scaleX(0.66);
   transform-origin: right;
+  height: 1px;
 }
 .open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);  
 }
 
 .open span:nth-child(2) {
