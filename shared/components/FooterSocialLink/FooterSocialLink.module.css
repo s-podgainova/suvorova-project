@@ -1,0 +1,15 @@
+.social {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline-end: 5px;
+  border: var(--border);
+  border-radius: 100%;
+  transition: border-color 0.4s;
+  block-size: 44px;
+  inline-size: 44px;
+}
+
+.social:hover {
+  border-color: var(--color-accent);
+}
