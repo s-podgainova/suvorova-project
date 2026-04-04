@@ -2,7 +2,7 @@
 
 import { Container } from "@/shared/components/Container/Container";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { SideMenu } from "../SideMenu/SideMenu";
 import styles from "./Header.module.css";
 import Link from "next/link";
@@ -10,6 +10,7 @@ import Image from "next/image";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const burgerRef = useRef<HTMLButtonElement | null>(null);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -32,11 +33,15 @@ export const Header = () => {
                 height={59}
               />
             </Link>
-            <BurgerButton isOpen={isOpen} onClick={toggleMenu} />
+            <BurgerButton
+              isOpen={isOpen}
+              onClick={toggleMenu}
+              ref={burgerRef}
+            />
           </div>
         </Container>
       </header>
-      <SideMenu isOpen={isOpen} onClose={closeMenu} />
+      <SideMenu isOpen={isOpen} onClose={closeMenu} burgerRef={burgerRef} />
     </>
   );
 };

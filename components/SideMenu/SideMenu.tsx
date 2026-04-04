@@ -2,21 +2,23 @@ import { usePathname } from "next/navigation";
 import { AnimatedLink } from "@/shared/components/AnimatedLink/AnimatedLink";
 import { menuItems } from "./menuData";
 import styles from "./SideMenu.module.css";
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { useClickOutside } from "@/shared/hooks/useClickOutside";
 
 type SideMenuProps = {
   isOpen: boolean;
   onClose: () => void;
+  burgerRef: RefObject<HTMLButtonElement | null>;
 };
 
-export const SideMenu = ({ isOpen, onClose }: SideMenuProps) => {
+export const SideMenu = ({ isOpen, onClose, burgerRef }: SideMenuProps) => {
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   useClickOutside({
     ref: menuRef,
     onOutsideClick: onClose,
     enabled: isOpen,
+    ignoreRefs: [burgerRef],
   });
 
   useEffect(() => {
