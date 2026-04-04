@@ -36,7 +36,7 @@ export const Header = () => {
             <BurgerButton
               isOpen={isOpen}
               onClick={toggleMenu}
-              ref={burgerRef}
+              burgerRef={burgerRef}
             />
           </div>
         </Container>
