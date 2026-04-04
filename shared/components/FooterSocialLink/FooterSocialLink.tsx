@@ -1,14 +1,9 @@
-import { MaxIcon } from "@/shared/icons/MaxIcon";
-import { InstagramIcon } from "@/shared/icons/InstagramIcon";
-import { TGIcon } from "@/shared/icons/TGIcon";
 import styles from "./FooterSocialLink.module.css";
 import { Max } from "@/shared/icons/Max";
 import { Instagram } from "@/shared/icons/Instagram";
 import { TG } from "@/shared/icons/TG";
-import { Instagr } from "@/shared/icons/Instagr";
 
 type FooterSocialLinkProps = {
-  href?: string;
   socialType: "instagram" | "tg" | "max";
 };
 
@@ -30,19 +25,17 @@ const socials = {
   },
 };
 
-export const FooterSocialLink = ({
-  href,
-  socialType,
-}: FooterSocialLinkProps) => {
+export const FooterSocialLink = ({ socialType }: FooterSocialLinkProps) => {
   const social = socials[socialType];
   const Icon = social.icon;
 
   return (
     <a
-      href={href}
+      href={social.href}
       target="_blank"
       rel="noopener noreferrer"
       className={styles.social}
+      aria-label={social.label}
     >
       <Icon />
     </a>

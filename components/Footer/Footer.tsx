@@ -8,13 +8,12 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <TextSplitSection
         heading="контакты"
-        title="интерьер рождается"
-        accent=" в&nbsp;диалоге"
+        accent="интерьер рождается в&nbsp;диалоге"
         className={styles.container}
       >
         <>
           <p>Санкт-Петербург</p>
-          <a href="#" className={styles.mail}>
+          <a href="#" className={styles.email}>
             info@suvorova-interior.ru
           </a>
           <div>
@@ -26,10 +25,9 @@ export const Footer = () => {
       </TextSplitSection>
       <div className={styles.bottom}>
         <Container>
-          <div className={styles.info}>
-            <p>© 2026 Suvorova Interiors. Весь материал на сайте авторский.</p>
-            <p>© 2026 Suvorova Interiors</p>
-          </div>
+          <p className={styles.copyright}>
+            © 2026 Suvorova Interiors. Весь материал на сайте авторский.
+          </p>
           <p className={styles.disclaimer}>
             *Компания Meta Platforms Inc., владеющая социальными сетями Facebook
             и Instagram, по решению суда от 21.03.2022 признана экстремистской

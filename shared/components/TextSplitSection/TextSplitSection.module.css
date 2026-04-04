@@ -6,12 +6,6 @@
   padding-block-end: var(--section-padding-bottom);
 }
 
-@media screen and (max-width: 760px) {
-  .wrapper {
-    flex-direction: column;
-  }
-}
-
 .heading {
   position: relative;
   border-block-end: var(--border);
@@ -39,7 +33,7 @@
 .title {
   margin-block-end: 20px;
   color: var(--color-heading);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   line-height: 1.5em;
   letter-spacing: 1px;
@@ -53,4 +47,14 @@
 
 .text {
   margin-block-end: 20px;
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .heading {
+    inline-size: 100%;
+  }
 }

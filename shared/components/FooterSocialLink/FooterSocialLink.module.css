@@ -13,3 +13,8 @@
 .social:hover {
   border-color: var(--color-accent);
 }
+
+.social:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+}

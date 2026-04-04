@@ -13,25 +13,28 @@
   --section-padding-bottom: 0;
 }
 
+.container .title {
+  font-size: 22px;
+}
+
 .bottom {
   border-block-start: var(--border);
   padding: 30px 0 30px 0;
 }
 
-.info {
-  display: flex;
-  justify-content: space-between;
+.copyright {
   font-size: 13px;
+  margin-block-end: 20px;
 }
 
 .disclaimer {
   font-size: 10px;
   line-height: 1.55;
-  margin-block-start: 20px;
+
   color: lightgrey;
 }
 
-.mail {
+.email {
   display: inline-block;
   padding-block: 8px;
   text-decoration-color: var(--color-accent);
