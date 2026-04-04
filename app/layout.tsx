@@ -4,10 +4,11 @@ import "../styles/globals.css";
 import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
 import { ReactNode } from "react";
 import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-montserrat",
 });
 
@@ -55,6 +56,7 @@ export default function RootLayout({
           <Header />
           <LinesOverlay />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

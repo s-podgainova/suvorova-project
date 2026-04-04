@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "@/shared/Container/Container";
+import { Container } from "@/shared/components/Container/Container";
 import { BurgerButton } from "../BurgerButton/BurgerButton";
 import { useState } from "react";
 import { SideMenu } from "../SideMenu/SideMenu";
@@ -36,7 +36,7 @@ export const Header = () => {
           </div>
         </Container>
       </header>
-      <SideMenu isOpen={isOpen} onClose={closeMenu}/>
+      <SideMenu isOpen={isOpen} onClose={closeMenu} />
     </>
   );
 };

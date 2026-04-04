@@ -1,5 +1,5 @@
 import { usePathname } from "next/navigation";
-import { AnimatedLink } from "@/shared/AnimatedLink/AnimatedLink";
+import { AnimatedLink } from "@/shared/components/AnimatedLink/AnimatedLink";
 import { menuItems } from "./menuData";
 import styles from "./SideMenu.module.css";
 import { useEffect } from "react";
