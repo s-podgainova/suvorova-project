@@ -26,12 +26,14 @@ export const Footer = () => {
       <div className={styles.bottom}>
         <Container>
           <p className={styles.copyright}>
-            © 2026 Suvorova Interiors. Весь материал на сайте авторский.
+            &copy;&nbsp;2026 Suvorova Interiors. Весь материал на&nbsp;сайте
+            авторский
           </p>
           <p className={styles.disclaimer}>
             *Компания Meta Platforms Inc., владеющая социальными сетями Facebook
-            и Instagram, по решению суда от 21.03.2022 признана экстремистской
-            организацией, ее деятельность на территории России запрещена.
+            и&nbsp;Instagram, по&nbsp;решению суда от&nbsp;21.03.2022 признана
+            экстремистской организацией, ее&nbsp;деятельность на&nbsp;территории
+            России запрещена.
           </p>
         </Container>
       </div>
