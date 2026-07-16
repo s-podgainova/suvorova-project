@@ -12,8 +12,7 @@ body {
 }
 
 main {
-  flex: 1;
-  /* margin-block-start: var(--header-height); */
+  flex: 1;  
 }
 
 h1,

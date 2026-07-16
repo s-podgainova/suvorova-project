@@ -1,5 +1,5 @@
 .header {
-  background-color: transparent;
+  background-color: var(--white);
   border-bottom: var(--border);
   inset: 0 0 auto 0;
   padding: 20px 0;
@@ -13,8 +13,4 @@
   display: flex;
   gap: 20px;
   justify-content: space-between;
-}
-
-.headerScrolled {
-  background-color:var(--color-bg);
 }
