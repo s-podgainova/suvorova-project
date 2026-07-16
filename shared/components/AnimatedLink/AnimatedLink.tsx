@@ -2,6 +2,7 @@
 
 import { ComponentProps, MouseEvent, useRef } from "react";
 import Link from "next/link";
+
 import styles from "./AnimatedLink.module.css";
 
 type AnimatedLink = ComponentProps<typeof Link> & {

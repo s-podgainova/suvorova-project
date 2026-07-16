@@ -1,24 +1,24 @@
 .fancy {
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 2px;
   position: relative;
   text-decoration: none;
-  display: inline-block;
-  letter-spacing: 2px;
-  font-weight: 400;
 }
 
 .fancy::after {
   --scale: 0;
-  content: "";
-  position: absolute;
-  top: 100%;
-  right: 0;
-  left: 0;
-  height: 1px;
-  border-radius: 5px;
   background-color: currentColor;
-  transition: transform 300ms cubic-bezier(0.51, 0.92, 0.24, 1);
+  border-radius: 5px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
   transform: scaleX(var(--scale));
   transform-origin: var(--x) 50%;
+  transition: transform 300ms cubic-bezier(0.51, 0.92, 0.24, 1);
 }
 
 .fancy:hover::after {

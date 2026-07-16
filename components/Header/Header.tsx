@@ -1,12 +1,14 @@
 "use client";
 
-import { Container } from "@/shared/components/Container/Container";
-import { BurgerButton } from "../BurgerButton/BurgerButton";
 import { useRef, useState } from "react";
-import { SideMenu } from "../SideMenu/SideMenu";
-import styles from "./Header.module.css";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+
+import { BurgerButton } from "@/components/BurgerButton/BurgerButton";
+import { SideMenu } from "@/components/SideMenu/SideMenu";
+import { Container } from "@/shared/components/Container/Container";
+
+import styles from "./Header.module.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

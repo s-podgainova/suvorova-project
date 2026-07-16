@@ -1,15 +1,15 @@
 .header {
-  position: fixed;
+  background-color: var(--color-bg);
+  border-bottom: var(--border);
   inset: 0 0 auto 0;
   padding: 20px 0;
-  border-bottom: var(--border);
-  background-color: var(--color-bg);
+  position: fixed;
   z-index: 999;
 }
 
 .inner {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   gap: 20px;
+  justify-content: space-between;
 }

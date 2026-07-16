@@ -28,19 +28,19 @@
 }
 
 .disclaimer {
-  font-size: 10px;
-  line-height: 1.55;
 
   color: lightgrey;
+  font-size: 10px;
+  line-height: 1.55;
 }
 
 .email {
   display: inline-block;
+  margin-block-end: 24px;
   padding-block: 8px;
   text-decoration-color: var(--color-accent);
   text-underline-offset: 7px;
   transition: color 0.3s;
-  margin-block-end: 24px;
 }
 
 @media (hover: hover) and (pointer: fine) {

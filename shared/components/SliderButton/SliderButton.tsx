@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowIcon } from "@/shared/icons/ArrowIcon";
+
 import styles from "./SliderButton.module.css";
 
 export type SliderButtonProps = {

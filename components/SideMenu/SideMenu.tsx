@@ -1,9 +1,13 @@
-import { usePathname } from "next/navigation";
-import { AnimatedLink } from "@/shared/components/AnimatedLink/AnimatedLink";
-import { menuItems } from "./menuData";
-import styles from "./SideMenu.module.css";
 import { RefObject, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+
 import { useClickOutside } from "@/shared/hooks/useClickOutside";
+
+import { AnimatedLink } from "@/shared/components/AnimatedLink/AnimatedLink";
+
+import { menuItems } from "./menuData";
+
+import styles from "./SideMenu.module.css";
 
 type SideMenuProps = {
   isOpen: boolean;

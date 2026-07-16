@@ -1,7 +1,8 @@
-import styles from "./FooterSocialLink.module.css";
-import { Max } from "@/shared/icons/Max";
 import { Instagram } from "@/shared/icons/Instagram";
+import { Max } from "@/shared/icons/Max";
 import { TG } from "@/shared/icons/TG";
+
+import styles from "./FooterSocialLink.module.css";
 
 type FooterSocialLinkProps = {
   socialType: "instagram" | "tg" | "max";

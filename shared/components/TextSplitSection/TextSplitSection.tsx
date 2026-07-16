@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
-import { Container } from "../Container/Container";
+
+import { Container } from "@/shared/components/Container/Container";
+
 import styles from "./TextSplitSection.module.css";
 
 type TextSplitSectionProps = {

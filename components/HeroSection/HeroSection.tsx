@@ -1,13 +1,17 @@
 "use client";
 
-import { Container } from "@/shared/components/Container/Container";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "./HeroSection.module.css";
+import Image from "next/image";
 import Link from "next/link";
-import { SliderButton } from "@/shared/components/SliderButton/SliderButton";
-import { slides } from "./slides";
+
 import { usePrefersReducedMotion } from "@/shared/hooks/usePrefersReducedMotion";
+
+import { Container } from "@/shared/components/Container/Container";
+import { SliderButton } from "@/shared/components/SliderButton/SliderButton";
+
+import { slides } from "./slides";
+
+import styles from "./HeroSection.module.css";
 
 export const HeroSection = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
