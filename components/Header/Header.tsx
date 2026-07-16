@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +12,34 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const burgerRef = useRef<HTMLButtonElement | null>(null);
+  const headerRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    const header = headerRef.current;
+
+    if (!header) return;
+
+    const headerHeight = header.offsetHeight;
+
+    document.documentElement.style.setProperty(
+      " --header-height",
+      `${headerHeight}`,
+    );
+
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY >= headerHeight);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -24,7 +51,9 @@ export const Header = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      <header ref={headerRef} className={`${styles.header} ${
+    isScrolled ? styles.headerScrolled : ""
+  }`}>
         <Container>
           <div className={styles.inner}>
             <Link href="/" className={styles.logo} aria-label="На главную">
