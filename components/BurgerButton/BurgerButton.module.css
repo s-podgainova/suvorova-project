@@ -1,9 +1,9 @@
 .burger {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  inline-size: 44px;
   block-size: 44px;
+  display: flex;
+  inline-size: 44px;
+  justify-content: center;
 }
 
 .icon {
@@ -14,9 +14,9 @@
 .lineMiddle,
 .lineBottom {
   stroke: var(--color-burger);
-  transition: transform 0.3s ease;
   stroke-width: 1;
   transform-box: fill-box;
+  transition: transform 0.3s ease;
 }
 
 .lineTop,

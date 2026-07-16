@@ -1,10 +1,12 @@
+import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat, Oswald, Raleway } from "next/font/google";
-import "../styles/globals.css";
-import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
-import { ReactNode } from "react";
-import { Header } from "@/components/Header/Header";
+
 import { Footer } from "@/components/Footer/Footer";
+import { Header } from "@/components/Header/Header";
+import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
+
+import "@/styles/globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic"],
