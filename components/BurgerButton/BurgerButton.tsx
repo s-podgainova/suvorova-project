@@ -1,4 +1,5 @@
 import { RefObject } from "react";
+
 import styles from "./BurgerButton.module.css";
 
 type BurgerButtonProps = {
