@@ -1,53 +1,29 @@
 @import "./reset.css";
-
-:root {
-  /* Цвета */
-  --color-bg: #ffffff;
-  --color-accent: #c5a47e;
-  --color-accent: #cb895d;
-  --color-line: rgba(0, 0, 0, 0.05);
-  --color-heading: #1b1b1b;
-  --color-text: #777;
-
-  /* Типографика */
-  --font-size: 15px;
-  --line-height: 1.75em;
-
-  /* Отступы */
-  --container-pad: 12px;
-  --section-padding-top: 120px;
-  --section-padding-bottom: 120px;
-
-  /* Линии */
-  --border: 1px solid var(--color-line);
-
-  /* Для отдельных компонентов */
-  --header-height: 100px;
-  --color-burger: #1b1b1b;
-}
+@import "./variables.css";
 
 body {
   color: var(--color-text);
   font-family: var(--font-montserrat), system-ui, sans-serif;
-  font-size: var(--font-size);  
-  line-height: var(--line-height);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-regular);
   background: var(--color-bg);
+  padding-top: var(--header-height);
 }
 
 main {
-  margin-block-start: var(--header-height);
   flex: 1;
 }
 
 h1,
 h2,
 h3,
-h4 {  
+h4 {
   color: var(--color-heading);
   font-family: var(--font-oswald), system-ui, sans-serif;
 }
 
-a, button {
+a,
+button {
   cursor: pointer;
 }
 
@@ -58,6 +34,6 @@ a:hover {
 .site {
   position: relative;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   min-height: 100vh;
 }

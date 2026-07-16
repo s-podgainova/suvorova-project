@@ -1,0 +1,91 @@
+"use client";
+
+import { Container } from "@/shared/components/Container/Container";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import styles from "./HeroSection.module.css";
+import Link from "next/link";
+import { SliderButton } from "@/shared/components/SliderButton/SliderButton";
+import { slides } from "./slides";
+import { usePrefersReducedMotion } from "@/shared/hooks/usePrefersReducedMotion";
+
+export const HeroSection = () => {
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [isSliderPaused, setIsSliderPaused] = useState(false);
+  const isPrefersReducedMotion = usePrefersReducedMotion();
+
+  const currentSlide = slides[currentSlideIndex];
+
+  const goToNextSlide = () => {
+    setCurrentSlideIndex((prev) => (prev < slides.length - 1 ? prev + 1 : 0));
+  };
+
+  useEffect(() => {
+    if (isSliderPaused || isPrefersReducedMotion) return;
+    const interval = setInterval(() => {
+      goToNextSlide();
+    }, 4000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentSlideIndex, isSliderPaused, isPrefersReducedMotion]);
+
+  const goToPrevSlide = () => {
+    setCurrentSlideIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const pauseSlider = () => {
+    setIsSliderPaused(true);
+  };
+
+  const resumeSlider = () => {
+    setIsSliderPaused(false);
+  };
+
+  return (
+    <section
+      className={styles.hero}
+      aria-roledescription="карусель"
+      aria-label="Избранные проекты"
+    >
+      <Image
+        src={currentSlide.image}
+        alt=""
+        fill
+        className={styles.heroImage}
+        sizes="100vw"
+      />
+      <Container>
+        <div
+          className={styles.heroContent}
+          key={currentSlideIndex}
+          onMouseEnter={pauseSlider}
+          onMouseLeave={resumeSlider}
+        >
+          <h1>{currentSlide.title}</h1>
+          <p className={styles.description}>{currentSlide.description}</p>
+          <Link href={currentSlide.link} className={styles.projectLink}>
+            Посмотреть
+          </Link>
+        </div>
+        <div
+          className={styles.sliderNavigation}
+          onMouseEnter={pauseSlider}
+          onMouseLeave={resumeSlider}
+        >
+          <SliderButton
+            direction="prev"
+            variant="light"
+            onClick={goToPrevSlide}
+          />
+          <SliderButton
+            direction="next"
+            variant="light"
+            onClick={goToNextSlide}
+          />
+        </div>
+      </Container>
+    </section>
+  );
+};
