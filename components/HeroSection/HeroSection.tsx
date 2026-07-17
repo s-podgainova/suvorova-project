@@ -53,13 +53,16 @@ export const HeroSection = () => {
       aria-roledescription="карусель"
       aria-label="Избранные проекты"
     >
-      <Image
-        src={currentSlide.image}
-        alt=""
-        fill
-        className={styles.heroImage}
-        sizes="100vw"
-      />
+      {slides.map((slide, index) => (
+        <Image
+          key={slide.title}
+          src={slide.image}
+          alt=""
+          fill
+          className={`${styles.heroImage} ${index === currentSlideIndex ? styles.active : ""}`}
+          sizes="100vw"
+        />
+      ))}
       <Container>
         <div
           className={styles.heroContent}
