@@ -1,10 +1,11 @@
+import { HeroSection } from "@/components/HeroSection/HeroSection";
 import { Container } from "@/shared/components/Container/Container";
 
 export default function Home() {
   return (
     <main>
+      <HeroSection />
       <Container>
-        <div className=""></div>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero
           excepturi consectetur fugit culpa a tempora impedit aliquid possimus

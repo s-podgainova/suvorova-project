@@ -1,0 +1,32 @@
+:root {
+  /* Цвета */
+  --white: #ffffff;
+  --beige-400: #c5a47e;
+  --beige-500: #cb895d;
+  --grey-200: #777;
+  --grey-400:rgba(0, 0, 0, 0.05);
+  --black:#1b1b1b;
+
+  --color-bg: var(--white);
+  --color-accent: var(--beige-500);
+  --color-line: var(--grey-400);
+  --color-heading: var(--black);
+  --color-text: var(--grey-200);
+  --color-hero-content: var(--white);
+
+  /* Типографика */
+  --font-size-regular: 15px;
+  --line-height-regular: 1.75em;
+
+  /* Отступы */
+  --header-height: 100px;
+  --container-pad: 12px;
+  --section-padding-top: 120px;
+  --section-padding-bottom: 120px;
+
+  /* Линии */
+  --border: 1px solid var(--color-line);
+
+  /* Для отдельных компонентов */
+  --color-burger: #1b1b1b;
+}

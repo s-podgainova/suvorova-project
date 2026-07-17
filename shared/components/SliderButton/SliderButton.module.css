@@ -1,0 +1,55 @@
+.light {
+  --slider-button-color: var(--white);
+  --slider-button-background: transparent;
+  --slider-button-hover-color: var(--black);
+  --slider-button-hover-background: var(--white);
+}
+
+.dark {
+  --slider-button-color: var(--white);
+  --slider-button-background: var(--color-accent);
+  --slider-button-hover-color: var(--black);
+  --slider-button-hover-background: var(--white);
+}
+
+.button {
+  align-items: center;
+  background-color: var(--slider-button-background);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--slider-button-color);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 40px;
+  justify-content: center;
+  transition:
+    color 200ms ease,
+    background-color 200ms ease,
+    transform 200ms ease;
+  width: 40px;
+}
+
+.button:hover {
+  background-color: var(--slider-button-hover-background);
+  color: var(--slider-button-hover-color);
+  transform: scale(0.9);
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.prev svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

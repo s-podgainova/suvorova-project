@@ -12,7 +12,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const burgerRef = useRef<HTMLButtonElement | null>(null);
   const headerRef = useRef<HTMLButtonElement | null>(null);
 
@@ -27,18 +27,6 @@ export const Header = () => {
       " --header-height",
       `${headerHeight}`,
     );
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY >= headerHeight);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   const toggleMenu = () => {
@@ -51,9 +39,10 @@ export const Header = () => {
 
   return (
     <>
-      <header ref={headerRef} className={`${styles.header} ${
-    isScrolled ? styles.headerScrolled : ""
-  }`}>
+      <header
+        ref={headerRef}
+        className={styles.header}
+      >
         <Container>
           <div className={styles.inner}>
             <Link href="/" className={styles.logo} aria-label="На главную">
