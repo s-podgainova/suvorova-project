@@ -3,11 +3,11 @@
 
 body {
   background: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: var(--font-size-regular);
   line-height: var(--line-height-regular);
-  background: var(--color-bg);
   padding-top: var(--header-height);
 }
 

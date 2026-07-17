@@ -13,25 +13,25 @@
 }
 
 .button {
-  display: inline-flex;
-  width: 40px;
-  height: 40px;
-  flex: 0 0 auto;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: var(--slider-button-color);
   background-color: var(--slider-button-background);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  color: var(--slider-button-color);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 40px;
+  justify-content: center;
   transition:
     color 200ms ease,
     background-color 200ms ease,
     transform 200ms ease;
+  width: 40px;
 }
 
 .button:hover {
-  color: var(--slider-button-hover-color);
   background-color: var(--slider-button-hover-background);
+  color: var(--slider-button-hover-color);
   transform: scale(0.9);
 }
 

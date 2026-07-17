@@ -1,40 +1,40 @@
 .hero {
-  position: relative;
+  background-color: var(--color-text);
+  color: var(--color-hero-content);
   display: grid;
-  place-items: center;
   min-height: 80vh;
   min-height: 80svh;
-  color: var(--color-hero-content);
-  background-color: var(--color-text);
+  place-items: center;
+  position: relative;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
   background: linear-gradient(
     90deg,
     rgb(0 0 0 / 35%) 0%,
     rgb(0 0 0 / 25%) 65%,
     transparent 100%
   );
+  content: "";
+  inset: 0;
+  position: absolute;
 }
 
 .heroImage {
   object-fit: cover;
-  position: absolute;
   opacity: 0;
+  position: absolute;
   transition: opacity 800ms ease;
 }
 
 .heroImage.active {
-opacity: 1;
+  opacity: 1;
 }
 
 .heroContent {
   position: relative;
-  z-index: 1;
   width: 100%;
+  z-index: 1;
 }
 
 @media (min-width: 992px) {
@@ -44,14 +44,14 @@ opacity: 1;
 }
 
 .heroContent h1 {
-  margin-block-end: 30px;
-  color: inherit;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 1.2em;
-  letter-spacing: 3px;
-  text-transform: uppercase;
   animation-delay: 0.4s;
+  color: inherit;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2em;
+  margin-block-end: 30px;
+  text-transform: uppercase;
 }
 
 .description {
@@ -59,27 +59,27 @@ opacity: 1;
 }
 
 .projectLink {
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  margin-block-start: 30px;
+  animation-delay: 0.8s;
+  background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 80px;
-  padding: 14px 30px;
   color: #fff;
+  display: inline-flex;
   font-weight: 400;
+  justify-content: center;
   line-height: 20px;
+  margin-block-start: 30px;
+  padding: 14px 30px;
   text-align: center;
-  background-color: transparent;
   transition:
     color 400ms ease,
     background-color 400ms ease;
-  animation-delay: 0.8s;
 }
 
 .projectLink:hover {
-  color: var(--black);
   background-color: var(--white);
+  color: var(--black);
 }
 
 @keyframes fadeInUp {
@@ -97,37 +97,67 @@ opacity: 1;
 .heroContent h1,
 .description,
 .projectLink {
-  animation-name: fadeInUp;
-  animation-fill-mode: both;
   animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
 }
 
-.sliderNavigation {
+.navigationLine {
+  align-items: center;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  left: 14%;
   position: absolute;
   right: 12%;
-  bottom: 5%;
   z-index: 1;
+}
+
+.counter {
+  align-items: end;
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
 }
 
+.progressTrack {
+  background-color: rgba(255, 255, 255, 0.3);
+  block-size: 1px;
+  inline-size: 120px;
+  margin-block-end: 10px;
+  position: relative;
+}
+
+.progressFill {
+  background-color: var(--white);
+  block-size: 100%;
+  position: absolute;
+}
+
+.counterNumber {
+  min-inline-size: 20px;
+}
+
+.sliderControls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
-  .sliderNavigation {
+  .navigationLine {
     display: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .heroContent h1,
-  .projectNumber,
   .description,
   .projectLink {
     animation: none;
   }
 
-  .projectLink {
+  .projectLink, .heroImage {
     transition: none;
   }
 }

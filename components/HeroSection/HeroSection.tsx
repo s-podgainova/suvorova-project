@@ -20,6 +20,11 @@ export const HeroSection = () => {
 
   const currentSlide = slides[currentSlideIndex];
 
+  const currentSlideNumber = String(currentSlideIndex + 1).padStart(2, "0");
+  const totalSlideNumber = String(slides.length).padStart(2, "0");
+
+  const progressPercentage = ((currentSlideIndex + 1) / slides.length) * 100;
+
   const goToNextSlide = () => {
     setCurrentSlideIndex((prev) => (prev < slides.length - 1 ? prev + 1 : 0));
   };
@@ -47,10 +52,26 @@ export const HeroSection = () => {
     setIsSliderPaused(false);
   };
 
+  function handleFocus(event: React.FocusEvent<HTMLDivElement>) {
+    const previousElement = event.relatedTarget as Node | null;
+
+    if (!event.currentTarget.contains(previousElement)) {
+      pauseSlider();
+    }
+  }
+
+  function handleBlur(event: React.FocusEvent<HTMLDivElement>) {
+    const nextElement = event.relatedTarget as Node | null;
+
+    if (!event.currentTarget.contains(nextElement)) {
+      resumeSlider();
+    }
+  }
+
   return (
     <section
       className={styles.hero}
-      aria-roledescription="карусель"
+      aria-roledescription="слайдер"
       aria-label="Избранные проекты"
     >
       {slides.map((slide, index) => (
@@ -72,25 +93,47 @@ export const HeroSection = () => {
         >
           <h1>{currentSlide.title}</h1>
           <p className={styles.description}>{currentSlide.description}</p>
-          <Link href={currentSlide.link} className={styles.projectLink}>
+          <Link
+            href={currentSlide.link}
+            className={styles.projectLink}
+            onFocus={pauseSlider}
+            onBlur={resumeSlider}
+          >
             Посмотреть
           </Link>
         </div>
-        <div
-          className={styles.sliderNavigation}
-          onMouseEnter={pauseSlider}
-          onMouseLeave={resumeSlider}
-        >
-          <SliderButton
-            direction="prev"
-            variant="light"
-            onClick={goToPrevSlide}
-          />
-          <SliderButton
-            direction="next"
-            variant="light"
-            onClick={goToNextSlide}
-          />
+        <div className={styles.navigationLine}>
+          {/* Каунтер */}
+          <div className={styles.counter}>
+            <span className={styles.counterNumber}>{currentSlideNumber}</span>
+            <div className={styles.progressTrack}>
+              <div
+                className={styles.progressFill}
+                style={{ inlineSize: `${progressPercentage}%` }}
+              ></div>
+            </div>
+            <span className={styles.counterNumber}>{totalSlideNumber}</span>
+          </div>
+
+          {/* Кнопки слайдера */}
+          <div
+            className={styles.sliderControls}
+            onMouseEnter={pauseSlider}
+            onMouseLeave={resumeSlider}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+          >
+            <SliderButton
+              direction="prev"
+              variant="light"
+              onClick={goToPrevSlide}
+            />
+            <SliderButton
+              direction="next"
+              variant="light"
+              onClick={goToNextSlide}
+            />
+          </div>
         </div>
       </Container>
     </section>
