@@ -27,7 +27,7 @@ export const AboutSection = () => {
       </div>
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/about/IMG_5202.WEBP"
+          src="/images/about/about.webp"
           sizes="(max-width: 960px) 100vw, 528px"
           alt="Портрет Софьи Суворовой"
           className={styles.image}
