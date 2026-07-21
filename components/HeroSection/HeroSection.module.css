@@ -1,0 +1,163 @@
+.hero {
+  background-color: var(--color-text);
+  color: var(--color-hero-content);
+  display: grid;
+  min-height: 80vh;
+  min-height: 80svh;
+  place-items: center;
+  position: relative;
+}
+
+.hero::after {
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 35%) 0%,
+    rgb(0 0 0 / 25%) 65%,
+    transparent 100%
+  );
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.heroImage {
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 800ms ease;
+}
+
+.heroImage.active {
+  opacity: 1;
+}
+
+.heroContent {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .heroContent {
+    width: 60%;
+  }
+}
+
+.heroContent h1 {
+  animation-delay: 0.4s;
+  color: inherit;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2em;
+  margin-block-end: 30px;
+  text-transform: uppercase;
+}
+
+.description {
+  animation-delay: 0.6s;
+}
+
+.projectLink {
+  align-items: center;
+  animation-delay: 0.8s;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 80px;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 20px;
+  margin-block-start: 30px;
+  padding: 14px 30px;
+  text-align: center;
+  transition:
+    color 400ms ease,
+    background-color 400ms ease;
+}
+
+.projectLink:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroContent h1,
+.description,
+.projectLink {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
+.navigationLine {
+  align-items: center;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  left: 14%;
+  position: absolute;
+  right: 12%;
+  z-index: 1;
+}
+
+.counter {
+  align-items: end;
+  display: flex;
+  gap: 8px;
+}
+
+.progressTrack {
+  background-color: rgba(255, 255, 255, 0.3);
+  block-size: 1px;
+  inline-size: 120px;
+  margin-block-end: 10px;
+  position: relative;
+}
+
+.progressFill {
+  background-color: var(--white);
+  block-size: 100%;
+  position: absolute;
+}
+
+.counterNumber {
+  min-inline-size: 20px;
+}
+
+.sliderControls {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navigationLine {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroContent h1,
+  .description,
+  .projectLink {
+    animation: none;
+  }
+
+  .projectLink, .heroImage {
+    transition: none;
+  }
+}

@@ -1,0 +1,61 @@
+.burger {
+  align-items: center;
+  block-size: 44px;
+  display: flex;
+  inline-size: 44px;
+  justify-content: center;
+}
+
+.icon {
+  overflow: visible;
+}
+
+.lineTop,
+.lineMiddle,
+.lineBottom {
+  stroke: var(--color-burger);
+  stroke-width: 1;
+  transform-box: fill-box;
+  transition: transform 0.3s ease;
+}
+
+.lineTop,
+.lineBottom {
+  transform-origin: center;
+}
+
+.lineMiddle {
+  transform: scaleX(0.66);
+  transform-origin: right;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .burger:hover .lineMiddle {
+    transform: scaleX(1);
+  }
+}
+
+.burger:active .lineMiddle {
+  transform: scaleX(1);
+}
+
+.burger:focus-visible {
+  outline: 2px solid red;
+  outline-offset: 4px;
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.open .lineTop {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.open .lineMiddle {
+  opacity: 0;
+}
+
+.open .lineBottom {
+  transform: translateY(-7px) rotate(-45deg);
+}

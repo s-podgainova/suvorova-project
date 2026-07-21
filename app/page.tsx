@@ -1,10 +1,13 @@
-import { Container } from "@/shared/Container/Container";
+import { AboutSection } from "@/components/AboutSection/AboutSection";
+import { HeroSection } from "@/components/HeroSection/HeroSection";
+import { Container } from "@/shared/components/Container/Container";
 
 export default function Home() {
   return (
     <main>
+      <HeroSection />
       <Container>
-        <h1>suvorova project</h1>
+        <AboutSection/>
       </Container>
     </main>
   );
