@@ -9,7 +9,7 @@ export const AboutSection = () => {
     <section className={styles.wrapper}>
       <div className={styles.content}>
         <div>
-          <p className={styles.title}>Софья-Мария Суворова</p>
+          <p className={styles.title}>Софья-Мария <span className={styles.accent}>Суворова</span></p>
           <h2 className={styles.heading}>обо мне</h2>{" "}
         </div>
         <p className={styles.text}>
