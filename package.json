@@ -6,9 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npm run lint:js && npm run css:sort",
+    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint . --fix",
-    "css:sort": "postcss \"{app,components,shared,styles}/**/*.css\" --replace"
+    "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -23,8 +23,11 @@
     "eslint-config-next": "16.1.6",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "postcss": "^8.5.19",
-    "postcss-cli": "^11.0.1",
-    "postcss-sorting": "^10.0.0",
+    "stylelint": "^17.14.1",
+    "stylelint-config-css-modules": "^4.6.0",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-order": "^8.1.1",
     "typescript": "^5"
   }
 }

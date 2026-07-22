@@ -1,28 +1,25 @@
 .overlay {
+  position: absolute;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  position: absolute;
 }
 
 .inner {
-  border-bottom: var(--border);
-  border-left: var(--border);
-  border-right: var(--border);
+  position: absolute;
+  top: 0;
   bottom: 0;
   left: 50%;
-  position: absolute;
-  top: 0;  
-  transform: translateX(-50%);
   width: 1140px;
+  border-right: var(--border);
+  border-bottom: var(--border);
+  border-left: var(--border);  
+  transform: translateX(-50%);
 }
 
 .lines {
-  border-left: var(--border);
-  border-right: var(--border);
-  bottom: 0;
-  left: 33.3333%;
   position: absolute;
-  right: 33.3333%;
-  top: 0;
+  inset: 0 33.3333%;
+  border-right: var(--border);
+  border-left: var(--border);
 }

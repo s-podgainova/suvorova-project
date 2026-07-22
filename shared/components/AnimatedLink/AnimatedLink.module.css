@@ -1,21 +1,22 @@
 .fancy {
+  position: relative;
   display: inline-block;
   font-weight: 400;
   letter-spacing: 2px;
-  position: relative;
   text-decoration: none;
 }
 
 .fancy::after {
   --scale: 0;
-  background-color: currentColor;
-  border-radius: 5px;
-  content: "";
-  height: 1px;
-  left: 0;
+
   position: absolute;
-  right: 0;
   top: 100%;
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background-color: currentcolor;
+  border-radius: 5px;
   transform: scaleX(var(--scale));
   transform-origin: var(--x) 50%;
   transition: transform 300ms cubic-bezier(0.51, 0.92, 0.24, 1);
