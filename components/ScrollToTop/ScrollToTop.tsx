@@ -8,8 +8,13 @@ import styles from "./ScrollToTop.module.css";
 const VISIBILITY_THRESHOLD = 0.8;
 
 export default function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
+
+  return <ScrollToTopInstance key={pathname} />;
+}
+
+const ScrollToTopInstance = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const pathRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
@@ -31,7 +36,7 @@ export default function ScrollToTop() {
     return () => {
       observer.disconnect();
     };
-  }, [pathname]);
+  }, []);
 
   const scrollToTop = () => {
     const prefersReducedMotion = window.matchMedia(
@@ -80,7 +85,7 @@ export default function ScrollToTop() {
     return () => {
       window.removeEventListener("scroll", updateProgress);
     };
-  }, [pathname]);
+  }, []);
 
   return (
     <button
@@ -103,4 +108,4 @@ export default function ScrollToTop() {
       </svg>
     </button>
   );
-}
+};

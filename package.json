@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "npm run lint:js && npm run css:sort",
     "lint:js": "eslint . --fix",
-    "css:sort": "postcss \"{app,components,shared,styles}/**/*.css\" --replace"
+    "css:sort": "postcss \"app/**/*.css\" \"components/**/*.css\" \"shared/**/*.css\" \"styles/**/*.css\" --replace"
   },
   "dependencies": {
     "next": "16.1.6",
