@@ -1,12 +1,12 @@
 .social {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  inline-size: 44px;
   block-size: 44px;
+  margin-inline-end: 5px;
   border: var(--border);
   border-radius: 100%;
-  display: inline-flex;
-  inline-size: 44px;
-  justify-content: center;
-  margin-inline-end: 5px;
   transition: border-color 0.4s;
 }
 
@@ -15,6 +15,6 @@
 }
 
 .social:focus-visible {
-  border-color: var(--color-accent);
   outline: none;
+  border-color: var(--color-accent);
 }

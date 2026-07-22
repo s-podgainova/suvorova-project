@@ -1,14 +1,13 @@
-@import "./reset.css";
-@import "./variables.css";
+@import url("./reset.css");
+@import url("./variables.css");
 
 body {
-  background: var(--color-bg);
-  background: var(--color-bg);
-  color: var(--color-text);
+  padding-top: var(--header-height);
   font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: var(--font-size-regular);
   line-height: var(--line-height-regular);
-  padding-top: var(--header-height);
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 main {
@@ -19,8 +18,8 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--color-heading);
   font-family: var(--font-oswald), system-ui, sans-serif;
+  color: var(--color-heading);
 }
 
 a,
@@ -33,8 +32,8 @@ a:hover {
 }
 
 .site {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  position: relative;
 }

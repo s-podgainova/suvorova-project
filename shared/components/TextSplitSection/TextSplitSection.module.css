@@ -1,44 +1,43 @@
 .wrapper {
-  align-items: flex-start;
   display: flex;
   gap: 30px;
-  padding-block-end: var(--section-padding-bottom);
-  padding-block-start: var(--section-padding-top);
+  align-items: flex-start;
+  padding-block: var(--section-padding-top) var(--section-padding-bottom);
 }
 
 .heading {
-  border-block-end: var(--border);
+  position: relative;
+  inline-size: 32%;
+  padding: 0 0 15px 15px;
   font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  inline-size: 32%;
-  letter-spacing: 3px;
-  padding: 0 0 15px 15px;
-  position: relative;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  border-block-end: var(--border);
 }
 
 .heading::before {
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  content: "";
-  height: 5px;
-  left: 0;
   position: absolute;
   top: 33%;
-  transform: translateY(-50%);
+  left: 0;
   width: 5px;
+  height: 5px;
+  content: "";
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 .title {
-  color: var(--color-heading);
+  margin-block-end: 20px;
   font-size: 24px;
   font-weight: 500;
-  letter-spacing: 1px;
   line-height: 1.5em;
-  margin-block-end: 20px;
+  color: var(--color-heading);
   text-transform: uppercase;
   word-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 .accent {
@@ -49,7 +48,7 @@
   margin-block-end: 20px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (width <= 760px) {
   .wrapper {
     flex-direction: column;
   }

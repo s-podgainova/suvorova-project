@@ -1,47 +1,47 @@
 .menu {
-  background-color: var(--color-bg);
-  border-left: 1px solid rgba(255, 255, 255, 0.075);
+  position: fixed;
+  top: calc(var(--header-height));
+  right: 0;
   bottom: 0;
+  z-index: 900;
+  visibility: hidden;
   inline-size: 340px;
   padding: 0 40px;
   pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: calc(var(--header-height));
+  background-color: var(--color-bg);
+  border-left: 1px solid rgb(255 255 255 / 7.5%);
   transform: translateX(100%);
   transition:
     transform 0.3s ease,
     visibility 0s linear 0.3s;
-  visibility: hidden;
-  z-index: 900;
 }
 
 .open {
+  visibility: visible;
   pointer-events: auto;
   transform: translateX(0%);
   transition:
     transform 0.3s ease,
     visibility 0s linear 0s;
-  visibility: visible;
 }
 
 .list {
-  align-items: start;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: start;
   margin-block-start: 60px;
-  position: relative;
 }
 
 .list > li:first-child {
-  font-family: var(--font-raleway);
   margin-bottom: 10px;
+  font-family: var(--font-raleway);
   text-transform: uppercase;
 }
 
 .overlay {
-  inset: 0;
   position: fixed;
+  inset: 0;
   z-index: 800;
 }

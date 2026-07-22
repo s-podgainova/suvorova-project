@@ -1,29 +1,29 @@
 .hero {
-  background-color: var(--color-text);
-  color: var(--color-hero-content);
+  position: relative;
   display: grid;
+  place-items: center;
   min-height: 80vh;
   min-height: 80svh;
-  place-items: center;
-  position: relative;
+  color: var(--color-hero-content);
+  background-color: var(--color-text);
 }
 
 .hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
   background: linear-gradient(
     90deg,
     rgb(0 0 0 / 35%) 0%,
     rgb(0 0 0 / 25%) 65%,
     transparent 100%
   );
-  content: "";
-  inset: 0;
-  position: absolute;
 }
 
 .heroImage {
+  position: absolute;
   object-fit: cover;
   opacity: 0;
-  position: absolute;
   transition: opacity 800ms ease;
 }
 
@@ -33,25 +33,25 @@
 
 .heroContent {
   position: relative;
-  width: 100%;
   z-index: 1;
+  width: 100%;
 }
 
-@media (min-width: 992px) {
+@media (width >= 992px) {
   .heroContent {
     width: 60%;
   }
 }
 
 .heroContent h1 {
-  animation-delay: 0.4s;
-  color: inherit;
+  margin-block-end: 30px;
   font-size: 48px;
   font-weight: 400;
-  letter-spacing: 3px;
   line-height: 1.2em;
-  margin-block-end: 30px;
+  color: inherit;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  animation-delay: 0.4s;
 }
 
 .description {
@@ -59,27 +59,35 @@
 }
 
 .projectLink {
+  display: inline-flex;
   align-items: center;
-  animation-delay: 0.8s;
+  justify-content: center;
+  padding: 14px 30px;
+  margin-block-start: 30px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
   background-color: transparent;
   border: 1px solid var(--white);
   border-radius: 80px;
-  color: #fff;
-  display: inline-flex;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 20px;
-  margin-block-start: 30px;
-  padding: 14px 30px;
-  text-align: center;
   transition:
     color 400ms ease,
     background-color 400ms ease;
+  animation-delay: 0.8s;
+}
+
+.heroContent h1,
+.description,
+.projectLink {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .projectLink:hover {
-  background-color: var(--white);
   color: var(--black);
+  background-color: var(--white);
 }
 
 @keyframes fadeInUp {
@@ -94,43 +102,35 @@
   }
 }
 
-.heroContent h1,
-.description,
-.projectLink {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-name: fadeInUp;
-}
-
 .navigationLine {
-  align-items: center;
-  bottom: 5%;
-  display: flex;
-  justify-content: space-between;
-  left: 14%;
   position: absolute;
   right: 12%;
+  bottom: 5%;
+  left: 14%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .counter {
-  align-items: end;
   display: flex;
   gap: 8px;
+  align-items: end;
 }
 
 .progressTrack {
-  background-color: rgba(255, 255, 255, 0.3);
-  block-size: 1px;
-  inline-size: 120px;
-  margin-block-end: 10px;
   position: relative;
+  inline-size: 120px;
+  block-size: 1px;
+  margin-block-end: 10px;
+  background-color: rgb(255 255 255 / 30%);
 }
 
 .progressFill {
-  background-color: var(--white);
-  block-size: 100%;
   position: absolute;
+  block-size: 100%;
+  background-color: var(--white);
 }
 
 .counterNumber {
@@ -138,13 +138,13 @@
 }
 
 .sliderControls {
-  align-items: center;
   display: flex;
   gap: 8px;
+  align-items: center;
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .navigationLine {
     display: none;
   }
