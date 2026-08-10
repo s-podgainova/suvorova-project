@@ -1,12 +1,11 @@
 :root {
   /* Цвета */
-  --white: #ffffff;
+  --white: #fff;
   --beige-400: #c5a47e;
   --beige-500: #cb895d;
   --grey-200: #777;
-  --grey-400:rgba(0, 0, 0, 0.05);
+  --grey-400:rgb(0 0 0 / 5%);
   --black:#1b1b1b;
-
   --color-bg: var(--white);
   --color-accent: var(--beige-500);
   --color-line: var(--grey-400);

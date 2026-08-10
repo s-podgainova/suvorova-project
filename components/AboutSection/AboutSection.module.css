@@ -1,8 +1,8 @@
 .wrapper {
-  align-items: center;
   display: grid;
-  gap: 30px;
   grid-template-columns: 50% 1fr;
+  gap: 30px;
+  align-items: center;
   padding-block-start: var(--section-padding-top);
 }
 
@@ -17,9 +17,9 @@
 }
 
 .imageWrapper {
+  position: relative;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  position: relative;
 }
 
 .image {
@@ -27,37 +27,37 @@
 }
 
 .title {
-  color: var(--color-heading);
   font-size: 36px;
   font-weight: 500;
-  letter-spacing: 1px;
   line-height: 1.5em;
+  color: var(--color-heading);
   text-transform: uppercase;
   word-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 .heading {
-  color: var(--color-accent);
+  position: relative;
+  padding-inline-start: 15px;
+  margin-inline-start: 5px;
   font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  letter-spacing: 3px;
-  margin-inline-start: 5px;
-  padding-inline-start: 15px;
-  position: relative;
+  color: var(--color-accent);
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .heading::before {
-  background-color: var(--color-accent);
-  border-radius: 50%;
-  content: "";
-  height: 5px;
-  left: 0;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
   width: 5px;
+  height: 5px;
+  content: "";
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 .list {
@@ -65,25 +65,25 @@
 }
 
 .list li {
-  align-items: baseline;
   display: flex;
   gap: 10px;
+  align-items: baseline;
 }
 
 .list li::before {
+  flex-shrink: 0;
   color: var(--color-accent);
   content: "✓";
-  flex-shrink: 0;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (width <= 960px) {
   .wrapper {
     grid-template-columns: 1fr;
   }
 
   .imageWrapper {
-    aspect-ratio: 16 / 14;
     order: -1;
+    aspect-ratio: 16 / 14;
   }
 
   .image {

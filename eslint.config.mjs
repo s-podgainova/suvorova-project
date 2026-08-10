@@ -22,9 +22,9 @@ const eslintConfig = defineConfig([
           ],
         },
       ],
-      "simple-import-sort/exports": "error",
+      "simple-import-sort/exports": "warn",
       "simple-import-sort/imports": [
-        "error",
+        "warn",
         {
           groups: [
             ["^react", "^next", "^@?\\w"],

@@ -5,8 +5,8 @@
 }
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 html,
@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 img,
@@ -49,13 +49,13 @@ a:visited {
 }
 
 button {
-  background: none;
-  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
   color: inherit;
   cursor: pointer;
-  font: inherit;
-  margin: 0;
-  padding: 0;
+  background: none;
+  border: none;
 }
 
 a:focus-visible,

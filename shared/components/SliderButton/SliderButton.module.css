@@ -13,25 +13,25 @@
 }
 
 .button {
-  align-items: center;
-  background-color: var(--slider-button-background);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  color: var(--slider-button-color);
   display: inline-flex;
   flex: 0 0 auto;
-  height: 40px;
+  align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--slider-button-color);
+  background-color: var(--slider-button-background);
+  border: 1px solid rgb(255 255 255 / 30%);
+  border-radius: 50%;
   transition:
     color 200ms ease,
     background-color 200ms ease,
     transform 200ms ease;
-  width: 40px;
 }
 
 .button:hover {
-  background-color: var(--slider-button-hover-background);
   color: var(--slider-button-hover-color);
+  background-color: var(--slider-button-hover-background);
   transform: scale(0.9);
 }
 
@@ -40,7 +40,7 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid currentColor;
+  outline: 2px solid currentcolor;
   outline-offset: 3px;
 }
 

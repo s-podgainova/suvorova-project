@@ -1,9 +1,9 @@
 .burger {
-  align-items: center;
-  block-size: 44px;
   display: flex;
-  inline-size: 44px;
+  align-items: center;
   justify-content: center;
+  inline-size: 44px;
+  block-size: 44px;
 }
 
 .icon {
@@ -35,10 +35,6 @@
   }
 }
 
-.burger:active .lineMiddle {
-  transform: scaleX(1);
-}
-
 .burger:focus-visible {
   outline: 2px solid red;
   outline-offset: 4px;
@@ -54,6 +50,10 @@
 
 .open .lineMiddle {
   opacity: 0;
+}
+
+.burger:active .lineMiddle {
+  transform: scaleX(1);
 }
 
 .open .lineBottom {
