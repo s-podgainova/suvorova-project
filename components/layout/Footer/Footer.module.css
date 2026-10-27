@@ -9,8 +9,7 @@
 }
 
 .container {
-  --section-padding-top: 90px;
-  --section-padding-bottom: 0;
+  padding-block: 0;
 }
 
 .container .title {

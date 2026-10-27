@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
-
 import { Container } from "@/components/ui/Container/Container";
 import { SliderButton } from "@/components/ui/SliderButton/SliderButton";
+
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 import { slides } from "./slides";
 

@@ -1,7 +1,5 @@
 import { ReactNode } from "react";
 
-import { Container } from "@/components/ui/Container/Container";
-
 import styles from "./TextSplitSection.module.css";
 
 type TextSplitSectionProps = {
@@ -22,18 +20,16 @@ export const TextSplitSection = ({
   className,
 }: TextSplitSectionProps) => {
   return (
-    <Container>
-      <div className={`${styles.wrapper} ${className ?? ""}`}>
-        <h2 className={styles.heading}>{heading}</h2>
-        <div className={styles.content}>
-          <p className={styles.title}>
-            {title}
-            <span className={styles.accent}>{accent}</span>
-          </p>
-          <p className={styles.text}>{text}</p>
-          {children}
-        </div>
+    <div className={`${styles.wrapper} ${className ?? ""}`}>
+      <h2 className={styles.heading}>{heading}</h2>
+      <div className={styles.content}>
+        <p className={styles.title}>
+          {title}
+          <span className={styles.accent}>{accent}</span>
+        </p>
+        <p className={styles.text}>{text}</p>
+        {children}
       </div>
-    </Container>
+    </div>
   );
 };

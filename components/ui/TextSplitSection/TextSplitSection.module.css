@@ -1,8 +1,7 @@
 .wrapper {
   display: flex;
   gap: 30px;
-  align-items: flex-start;
-  padding-block: var(--section-padding-top) var(--section-padding-bottom);
+  align-items: flex-start;  
 }
 
 .heading {
