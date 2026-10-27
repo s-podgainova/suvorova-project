@@ -1,24 +1,12 @@
 .projectsList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  row-gap: 40px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 60px;
   margin-block-start: 40px;
-}
-
-.item {
-  inline-size: 100%;
-  max-inline-size: 45%;
 }
 
 @media (width <= 768px) {
   .projectsList {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .item {
-    max-inline-size: 80%;
+    grid-template-columns: 1fr;
   }
 }

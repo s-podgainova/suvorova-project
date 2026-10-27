@@ -39,7 +39,7 @@ export const ProjectsList = () => {
   return (
     <ul className={styles.projectsList}>
       {projects.map((project) => (
-        <li className={styles.item} key={project.slug}>
+        <li key={project.slug}>
           <ProjectCard {...project} />
         </li>
       ))}

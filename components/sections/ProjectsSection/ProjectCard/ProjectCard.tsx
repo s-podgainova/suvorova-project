@@ -28,9 +28,11 @@ export const ProjectCard = ({
           fill
           className={styles.image}          
           sizes="
-  (max-width: 768px) calc(80vw - 19.2px),
-  (max-width: 1140px) calc(45vw - 10.8px),
-  502px"
+  (max-width: 320px) calc(100vw - 32px),
+  (max-width: 768px) 90vw,
+  (max-width: 1140px) calc(45vw - 30px),
+  (max-width: 1280px) calc(540px - 5vw),
+  476px"
         />
       </div>
     </Link>
