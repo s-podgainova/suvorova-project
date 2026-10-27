@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowIcon } from "@/shared/icons/ArrowIcon";
+import { ArrowIcon } from "@/icons/ArrowIcon";
 
 import styles from "./SliderButton.module.css";
 

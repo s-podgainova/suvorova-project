@@ -1,5 +1,5 @@
-import { Container } from "@/shared/components/Container/Container";
-import { TextSplitSection } from "@/shared/components/TextSplitSection/TextSplitSection";
+import { Container } from "@/components/ui/Container/Container";
+import { TextSplitSection } from "@/components/ui/TextSplitSection/TextSplitSection";
 
 import styles from "./Footer.module.css";
 

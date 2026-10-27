@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { Container } from "@/shared/components/Container/Container";
+import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./TextSplitSection.module.css";
 

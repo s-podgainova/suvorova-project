@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat, Oswald, Raleway } from "next/font/google";
 
-import { Footer } from "@/components/Footer/Footer";
-import { Header } from "@/components/Header/Header";
-import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
-import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import { Footer } from "@/components/layout/Footer/Footer";
+import { Header } from "@/components/layout/Header/Header";
+import LinesOverlay from "@/components/layout/LinesOverlay/LinesOverlay";
+import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
 
 import "@/styles/globals.css";
 

@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { BurgerButton } from "@/components/BurgerButton/BurgerButton";
-import { SideMenu } from "@/components/SideMenu/SideMenu";
-import { Container } from "@/shared/components/Container/Container";
+import { BurgerButton } from "@/components/layout/BurgerButton/BurgerButton";
+import { SideMenu } from "@/components/layout/SideMenu/SideMenu";
+import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./Header.module.css";
 
