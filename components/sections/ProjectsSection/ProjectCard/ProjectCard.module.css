@@ -58,6 +58,7 @@
   position: relative;
   inline-size: 100%;
   aspect-ratio: 9 / 10;
+  background-color: #eeeae5;
 }
 
 .image {

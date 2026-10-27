@@ -1,14 +1,8 @@
-import { ProjectCard } from "@/shared/components/ProjectCard/ProjectCard";
+import { ProjectCard } from "@/components/sections/ProjectsSection/ProjectCard/ProjectCard";
+
+import type { Project } from "@/types/project";
 
 import styles from "./ProjectsList.module.css";
-
-export type Project = {
-  slug: string;
-  type: string;
-  title: string;
-  image: string;
-  imageAlt: string;
-};
 
 const projects: Project[] = [
   {

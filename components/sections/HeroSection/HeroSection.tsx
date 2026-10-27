@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { usePrefersReducedMotion } from "@/shared/hooks/usePrefersReducedMotion";
+import { Container } from "@/components/ui/Container/Container";
+import { SliderButton } from "@/components/ui/SliderButton/SliderButton";
 
-import { Container } from "@/shared/components/Container/Container";
-import { SliderButton } from "@/shared/components/SliderButton/SliderButton";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 import { slides } from "./slides";
 
@@ -70,6 +70,7 @@ export const HeroSection = () => {
 
   return (
     <section
+      data-scroll-top-boundary
       className={styles.hero}
       aria-roledescription="слайдер"
       aria-label="Избранные проекты"

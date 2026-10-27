@@ -1,6 +1,6 @@
-import { Instagram } from "@/shared/icons/Instagram";
-import { Max } from "@/shared/icons/Max";
-import { TG } from "@/shared/icons/TG";
+import { Instagram } from "@/icons/Instagram";
+import { Max } from "@/icons/Max";
+import { TG } from "@/icons/TG";
 
 import styles from "./FooterSocialLink.module.css";
 

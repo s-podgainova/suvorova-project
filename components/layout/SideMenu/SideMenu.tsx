@@ -1,9 +1,9 @@
 import { RefObject, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-import { useClickOutside } from "@/shared/hooks/useClickOutside";
+import { AnimatedLink } from "@/components/ui/AnimatedLink/AnimatedLink";
 
-import { AnimatedLink } from "@/shared/components/AnimatedLink/AnimatedLink";
+import { useClickOutside } from "@/hooks/useClickOutside";
 
 import { menuItems } from "./menuData";
 

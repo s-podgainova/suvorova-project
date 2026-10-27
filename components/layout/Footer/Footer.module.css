@@ -9,8 +9,7 @@
 }
 
 .container {
-  --section-padding-top: 90px;
-  --section-padding-bottom: 0;
+  padding-block: 90px 0;
 }
 
 .container .title {
@@ -25,12 +24,6 @@
 .copyright {
   margin-block-end: 20px;
   font-size: 13px;
-}
-
-.disclaimer {
-  font-size: 10px;
-  line-height: 1.55;
-  color: lightgrey;
 }
 
 .email {
