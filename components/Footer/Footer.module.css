@@ -27,12 +27,6 @@
   font-size: 13px;
 }
 
-.disclaimer {
-  font-size: 10px;
-  line-height: 1.55;
-  color: lightgrey;
-}
-
 .email {
   display: inline-block;
   padding-block: 8px;

@@ -7,7 +7,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <Container>
-        <AboutSection/>
+        <AboutSection />
       </Container>
     </main>
   );

@@ -9,15 +9,18 @@ export const AboutSection = () => {
     <section className={styles.wrapper}>
       <div className={styles.content}>
         <div>
-          <p className={styles.title}>Софья-Мария <span className={styles.accent}>Суворова</span></p>
+          <p className={styles.title}>
+            Софья-Мария <span className={styles.accent}>Суворова</span>
+          </p>
           <h2 className={styles.heading}>обо мне</h2>{" "}
         </div>
         <p className={styles.text}>
-          Я&nbsp;— дизайнер интерьеров из&nbsp;Санкт-Петербурга.
-          <br /> Создаю продуманные пространства, где эстетика сочетается
-          с&nbsp;комфортом, а&nbsp;каждая деталь имеет свое значение.
-          <br /> От&nbsp;идеи до&nbsp;реализации&nbsp;— сопровождаю проект,
-          чтобы результат полностью соответствовал вашему образу жизни.
+          Я&nbsp;создаю интерьеры, которые делают приятнее повседневную жизнь:
+          учитывают привычки человека, дают ощущение комфорта
+          и&nbsp;эстетическое удовольствие. Мне одинаково важно, как
+          пространство работает и&nbsp;какие эмоции оно вызывает. Для меня
+          хороший интерьер рождается в&nbsp;диалоге&nbsp;&mdash;
+          из&nbsp;внимания к&nbsp;человеку и&nbsp;любви к&nbsp;красоте.
         </p>
         <ul className={styles.list}>
           <li>Функциональные интерьерные решения</li>

@@ -5,6 +5,7 @@ import { Montserrat, Oswald, Raleway } from "next/font/google";
 import { Footer } from "@/components/Footer/Footer";
 import { Header } from "@/components/Header/Header";
 import LinesOverlay from "@/components/LinesOverlay/LinesOverlay";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
 
 import "@/styles/globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
           <Header />
           <LinesOverlay />
           {children}
+          <ScrollToTop/>
           <Footer />
         </div>
       </body>
