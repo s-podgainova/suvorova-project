@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { ButtonLink } from "@/components/ui/ButtonLink/ButtonLink";
 import { Container } from "@/components/ui/Container/Container";
 
 import styles from "./NotFoundSection.module.css";
@@ -13,9 +12,9 @@ export const NotFoundSection = () => {
           <h1 id="not-found-title" className={styles.title}>
             Извините, страница не найдена
           </h1>
-          <Link href="/" className={styles.link}>
+          <ButtonLink href="/" className={styles.link}>
             На главную
-          </Link>
+          </ButtonLink>
         </div>
       </Container>
     </section>

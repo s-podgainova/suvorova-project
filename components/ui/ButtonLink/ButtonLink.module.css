@@ -1,0 +1,27 @@
+.link,
+.link:visited {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 30px;
+  font-size: var(--font-size-regular);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 50px;
+  transition: background-color 0.15s ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link:hover {
+    color: var(--color-accent);
+    background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

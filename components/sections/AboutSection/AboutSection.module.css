@@ -82,8 +82,8 @@
   }
 
   .imageWrapper {
-    order: -1;
     justify-self: center;
+    order: -1;
     inline-size: 100%;
     max-inline-size: 500px;
     aspect-ratio: 16 / 14;

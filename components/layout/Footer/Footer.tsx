@@ -1,8 +1,8 @@
 import { Container } from "@/components/ui/Container/Container";
+import { FooterSocialLink } from "@/components/ui/FooterSocialLink/FooterSocialLink";
 import { TextSplitSection } from "@/components/ui/TextSplitSection/TextSplitSection";
 
 import styles from "./Footer.module.css";
-import { FooterSocialLink } from "@/components/ui/FooterSocialLink/FooterSocialLink";
 
 export const Footer = () => {
   return (
