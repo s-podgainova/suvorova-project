@@ -8,5 +8,5 @@ export const menuItems: menuItems[] = [
   { label: "Обо мне", href: "/about" },
   { label: "Услуги", href: "/services" },
   { label: "Проекты", href: "/projects" },
-  { label: "Контакты", href: "/contacts" },
+  { label: "Контакты", href: "/contactsgit" },
 ];

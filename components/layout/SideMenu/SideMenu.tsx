@@ -53,7 +53,7 @@ export const SideMenu = ({ isOpen, onClose, burgerRef }: SideMenuProps) => {
 
             return (
               <li key={i.href}>
-                <AnimatedLink href={i.href} active={isActive}>
+                <AnimatedLink href={i.href} active={isActive} onClick={onClose}>
                   {i.label}
                 </AnimatedLink>
               </li>

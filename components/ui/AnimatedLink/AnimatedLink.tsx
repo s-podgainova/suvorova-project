@@ -8,11 +8,13 @@ import styles from "./AnimatedLink.module.css";
 type AnimatedLink = ComponentProps<typeof Link> & {
   className?: string;
   active: boolean;
+  onClick?: () => void;
 };
 
 export const AnimatedLink = ({
   className = "",
   active,
+  onClick,
   ...props
 }: AnimatedLink) => {
   const ref = useRef<HTMLAnchorElement | null>(null);
@@ -40,6 +42,7 @@ export const AnimatedLink = ({
       className={`${styles.fancy} ${className} ${active ? styles.active : ""}`}
       onMouseEnter={setX}
       onMouseLeave={setX}
+      onClick={onClick}
       {...props}
     />
   );

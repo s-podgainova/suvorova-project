@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 45px;
+  margin-block-start: 90px;
 }
 
 .footer .title {
