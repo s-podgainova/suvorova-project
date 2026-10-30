@@ -4,7 +4,9 @@
   right: 0;
   bottom: 0;
   z-index: 900;
+  display: flex;
   visibility: hidden;
+  flex-direction: column;
   inline-size: 340px;
   padding: 0 40px;
   pointer-events: none;
@@ -38,6 +40,23 @@
   margin-bottom: 10px;
   font-family: var(--font-raleway);
   text-transform: uppercase;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block-start: 32px;
+  margin-block: auto 60px;
+  border-block-start: var(--border);
+}
+
+.contactLabel {
+  margin-block-end: 12px;
+  font-size: 12px;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .overlay {

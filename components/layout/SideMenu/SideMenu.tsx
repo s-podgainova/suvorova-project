@@ -1,4 +1,5 @@
 import { RefObject, useEffect, useRef } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { AnimatedLink } from "@/components/ui/AnimatedLink/AnimatedLink";
@@ -61,6 +62,13 @@ export const SideMenu = ({ isOpen, onClose, burgerRef }: SideMenuProps) => {
           })}
         </ul>
       </nav>
+      <div className={styles.contacts}>
+        <p className={styles.contactLabel}>связаться со мной</p>
+        <Link href="mailto:info@suvorova-interior.ru">
+          info@suvorova-interior.ru
+        </Link>
+        <Link href="mailto:info@suvorova-interior.ru">Написать в MAX</Link>
+      </div>
     </div>
   );
 };
