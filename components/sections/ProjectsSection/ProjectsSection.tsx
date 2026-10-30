@@ -8,9 +8,7 @@ export const ProjectsSection = () => {
   return (
     <section className={styles.projectsSection}>
       <TextSplitSection
-        heading="Проекты"
-        title="lorem ipsum dolor sit amet"
-        text="lorem ipsum dolor sit amet"
+        heading="Проекты"        
       />
       <ProjectsList />
     </section>

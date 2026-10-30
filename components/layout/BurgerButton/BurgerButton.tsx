@@ -25,8 +25,8 @@ export const BurgerButton = ({
       <svg
         className={styles.icon}
         width="30"
-        height="17"
-        viewBox="0 0 30 17"
+        height="18"
+        viewBox="0 0 30 18"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"

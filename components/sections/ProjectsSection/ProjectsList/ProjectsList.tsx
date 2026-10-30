@@ -9,7 +9,7 @@ const projects: Project[] = [
     slug: "project-1",
     type: "Квартира",
     title: "ЖК «Мистола Хилз»",
-    image: "/images/projects/mistola.jpg",
+    image: "/images/projects/mistola.webp",
     imageAlt: "ЖК Мистола Хилз",
   },
   {
@@ -23,7 +23,7 @@ const projects: Project[] = [
     slug: "project-3",
     type: "Розовая квартира",
     title: "ЖК «GloraX Василеостровский»",
-    image: "/images/projects/glora.webp",
+    image: "/images/projects/glora1.webp",
     imageAlt: "ЖК GloraX Василеостровский",
   },
   {
