@@ -8,7 +8,7 @@ export const AboutSection = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.content}>
-        <div>
+        <div className={styles.inner}>
           <p className={styles.title}>
             Софья-Мария <span className={styles.accent}>Суворова</span>
           </p>
