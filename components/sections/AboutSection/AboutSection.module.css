@@ -23,6 +23,9 @@
 }
 
 .image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
 }
 
@@ -97,10 +100,10 @@
     order: -1;
     inline-size: 100%;
     max-inline-size: 500px;
-    aspect-ratio: 16 / 14;
+    aspect-ratio: auto;
   }
 
   .image {
-    object-position: 50% 20%;
+    block-size: auto;
   }
 }
