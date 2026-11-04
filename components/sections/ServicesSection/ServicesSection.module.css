@@ -23,7 +23,7 @@
   flex: none;
   font-size: 14px;
   font-style: italic;
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .title {
@@ -59,6 +59,7 @@
 
 .amount {
   font-size: 24px;
+  color: var(--color-accent);
 }
 
 .more {
