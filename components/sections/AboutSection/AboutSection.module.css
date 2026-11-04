@@ -1,14 +1,20 @@
 .wrapper {
   display: grid;
   grid-template-columns: 50% 1fr;
-  gap: 30px;
+  gap: 60px;
   align-items: center;  
+  padding-block-start: 60px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.text {
+  display: grid;
+  gap: 16px;
 }
 
 .accent {
@@ -73,25 +79,10 @@
   transform: translateY(-50%);
 }
 
-.list {
-  margin-block-end: 2rem;
-}
-
-.list li {
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
-}
-
-.list li::before {
-  flex-shrink: 0;
-  color: var(--color-accent);
-  content: "✓";
-}
-
 @media screen and (width <= 960px) {
   .wrapper {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .imageWrapper {
