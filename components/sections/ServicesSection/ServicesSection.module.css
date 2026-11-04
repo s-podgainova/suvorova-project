@@ -80,6 +80,11 @@
   display: none;
 }
 
+.toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .chevron {
   inline-size: 8px;
   block-size: 8px;
