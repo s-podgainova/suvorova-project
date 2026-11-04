@@ -23,8 +23,8 @@ export const ServicesSection = () => {
               <div className={styles.price}>
                 <div className={styles.priceOptions}>
                   {service.prices.map(({ label, amount }) => (
-                      <div key={amount ?? label} className={styles.priceOption}>
-                        {amount && <p className={styles.amount}>{amount}</p>}
+                    <div key={amount ?? label} className={styles.priceOption}>
+                      {amount && <p className={styles.amount}>{amount}</p>}
                       {label && <p className={styles.priceLabel}>{label}</p>}
                     </div>
                   ))}
@@ -36,7 +36,8 @@ export const ServicesSection = () => {
               {Details && (
                 <details className={styles.more}>
                   <summary className={styles.toggle}>
-                    Подробнее <span className={styles.chevron} aria-hidden="true" />
+                    Подробнее{" "}
+                    <span className={styles.chevron} aria-hidden="true" />
                   </summary>
                   <div className={styles.moreText}>
                     <Details />
