@@ -5,8 +5,6 @@ import { usePathname } from "next/navigation";
 
 import styles from "./ScrollToTop.module.css";
 
-const VISIBILITY_THRESHOLD = 0.8;
-
 export default function ScrollToTop() {
   const pathname = usePathname();
 
@@ -16,27 +14,6 @@ export default function ScrollToTop() {
 const ScrollToTopInstance = () => {
   const [isVisible, setIsVisible] = useState(false);
   const pathRef = useRef<SVGPathElement>(null);
-
-  useEffect(() => {
-    const hero = document.querySelector("[data-scroll-top-boundary]");
-
-    if (!hero) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.intersectionRatio < VISIBILITY_THRESHOLD);
-      },
-      {
-        threshold: VISIBILITY_THRESHOLD,
-      },
-    );
-
-    observer.observe(hero);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   const scrollToTop = () => {
     const prefersReducedMotion = window.matchMedia(
@@ -51,11 +28,7 @@ const ScrollToTopInstance = () => {
 
   useEffect(() => {
     const path = pathRef.current;
-    const boundary = document.querySelector<HTMLElement>(
-      "[data-scroll-top-boundary]",
-    );
-
-    if (!path || !boundary) return;
+    if (!path) return;
 
     const pathLength = path.getTotalLength();
 
@@ -64,13 +37,12 @@ const ScrollToTopInstance = () => {
 
     const updateProgress = () => {
       const scrollTop = window.scrollY;
+      const startScroll = window.innerHeight  * 0.3;
       const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
-
-      const startScroll =
-        boundary.offsetTop + boundary.offsetHeight * (1 - VISIBILITY_THRESHOLD);
       const availableScroll = maxScroll - startScroll;
 
+      setIsVisible(availableScroll > 0 && scrollTop > startScroll);
       const progress =
         availableScroll > 0 ? (scrollTop - startScroll) / availableScroll : 0;
       const normalizedProgress = Math.min(1, Math.max(0, progress));
@@ -81,9 +53,11 @@ const ScrollToTopInstance = () => {
 
     updateProgress();
     window.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
 
     return () => {
       window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
     };
   }, []);
 

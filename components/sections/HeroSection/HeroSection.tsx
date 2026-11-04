@@ -70,7 +70,6 @@ export const HeroSection = () => {
 
   return (
     <section
-      data-scroll-top-boundary
       className={styles.hero}
       aria-roledescription="слайдер"
       aria-label="Избранные проекты"
