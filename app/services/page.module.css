@@ -1,0 +1,9 @@
+.page {
+  padding-block-start: 90px;
+}
+
+@media (width <= 768px) {
+  .page {
+    padding-block-start: 60px;
+  }
+}
