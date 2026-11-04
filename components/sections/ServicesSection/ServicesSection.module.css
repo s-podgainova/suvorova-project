@@ -33,19 +33,19 @@
 }
 
 .description {
-  line-height: 1.5;
   padding-inline: 24px;
+  line-height: 1.5;
 }
 
 .price {
-  text-align: right;
-  line-height: 1.5;
   padding-inline-start: 24px;
+  line-height: 1.5;
+  text-align: right;
 }
 
 .duration {
-  color: var(--color-text);
   margin-block-start: 8px;
+  color: var(--color-text);
 }
 
 .priceOptions {
@@ -88,8 +88,8 @@
 .chevron {
   inline-size: 8px;
   block-size: 8px;
-  border-inline-end: 1px solid currentColor;
-  border-block-end: 1px solid currentColor;
+  border-block-end: 1px solid currentcolor;
+  border-inline-end: 1px solid currentcolor;
   transform: translateY(-2px) rotate(45deg);
 }
 
@@ -176,8 +176,8 @@
   }
 
   .price {
-    text-align: left;
     padding-inline-start: 0;
+    text-align: left;
   }
 
   .title {

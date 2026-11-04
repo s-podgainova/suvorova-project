@@ -1,0 +1,50 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
+}
+
+.image {
+  min-width: 0;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  padding-block-end: 24px;
+  font-size: clamp(1.75rem, 2.5vw, 2.125rem);
+  font-weight: 400;
+  line-height: 1.35;
+  border-block-end: 1px solid var(--color-accent);
+}
+
+.copy p {
+  margin-block-start: auto;
+}
+
+.copy a {
+  align-self: flex-start;
+  margin-block-end: auto;
+}
+
+@media (width <= 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .copy p,
+  .copy a {
+    margin-block: 0;
+  }
+}

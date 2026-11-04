@@ -1,10 +1,10 @@
-import { HeroSection } from "@/components/sections/HeroSection/HeroSection";
+import { IntroSection } from "@/components/sections/IntroSection/IntroSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection/ProjectsSection";
 
 export default function Home() {
   return (
     <main className="page">
-      <HeroSection />
+      <IntroSection />
       <ProjectsSection />
     </main>
   );

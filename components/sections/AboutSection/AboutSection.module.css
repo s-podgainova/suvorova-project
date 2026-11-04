@@ -2,8 +2,7 @@
   display: grid;
   grid-template-columns: 50% 1fr;
   gap: 30px;
-  align-items: center;
-  padding-block-start: var(--section-padding-top);
+  align-items: center;  
 }
 
 .content {

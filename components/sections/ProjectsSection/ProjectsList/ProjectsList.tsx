@@ -6,32 +6,32 @@ import styles from "./ProjectsList.module.css";
 
 const projects: Project[] = [
   {
-    slug: "project-1",
+    slug: "mistola-hills",
     type: "Квартира",
     title: "ЖК «Мистола Хилз»",
     image: "/images/projects/mistola.webp",
     imageAlt: "ЖК Мистола Хилз",
   },
   {
-    slug: "project-2",
-    type: "Квартира",
-    title: "ЖК «Морская Набережная»",
-    image: "/images/projects/marine.jpg",
-    imageAlt: "ЖК Морская Набережная",
-  },
-  {
-    slug: "project-3",
+    slug: "glorax-vasileostrovsky",
     type: "Розовая квартира",
     title: "ЖК «GloraX Василеостровский»",
     image: "/images/projects/glora1.webp",
     imageAlt: "ЖК GloraX Василеостровский",
   },
   {
-    slug: "project-4",
+    slug: "composers-street",
     type: "Спальня",
     title: "Улица Композиторов",
     image: "/images/projects/composer.webp",
     imageAlt: "Улица Композиторов",
+  },
+  {
+    slug: "seaside-promenade",
+    type: "Квартира",
+    title: "ЖК «Морская Набережная»",
+    image: "/images/projects/marine.jpg",
+    imageAlt: "ЖК Морская Набережная",
   },
 ];
 
