@@ -5,6 +5,7 @@
 }
 
 .image {
+  position: relative;
   min-width: 0;
 }
 
@@ -12,6 +13,17 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.imageCaption {
+  position: absolute;
+  top: clamp(30px, calc(12.5vw - 90px), 60px);
+  left: clamp(40px, calc(8.333vw - 40px), 60px);
+  max-width: min(14ch, calc(100% - 80px));
+  font-size: clamp(20px, calc(1.667vw + 4px), 24px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #928075;
 }
 
 .copy {
@@ -30,6 +42,7 @@
 
 .copy p {
   margin-block-start: auto;
+  font-size: 17px;
 }
 
 .copy a {

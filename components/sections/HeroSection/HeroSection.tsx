@@ -80,6 +80,7 @@ export const HeroSection = () => {
           src={slide.image}
           alt=""
           fill
+          placeholder="blur"
           className={`${styles.heroImage} ${index === currentSlideIndex ? styles.active : ""}`}
           sizes="100vw"
         />

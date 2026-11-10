@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import aboutPhoto from "@/public/images/about/about.jpg";
+
 import { SignatureIcon } from "./SignatureIcon";
 
 import styles from "./AboutSection.module.css";
@@ -44,12 +46,11 @@ export const AboutSection = () => {
       </div>
       <div className={styles.imageWrapper}>
         <Image
-          src="/images/about/about.jpg"
+          src={aboutPhoto}
           sizes="(max-width: 960px) min(500px, calc(100vw - 32px), 90vw), (max-width: 1140px) calc(45vw - 30px), (max-width: 1280px) calc(540px - 5vw), 476px"
           alt="Портрет Софьи Суворовой"
           className={styles.image}
-          width={600}
-          height={894}
+          placeholder="blur"
         />
       </div>
     </section>
