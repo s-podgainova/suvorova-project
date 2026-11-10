@@ -8,7 +8,7 @@ import styles from "./ServicesIntroSection.module.css";
 
 export const ServicesIntroSection = () => (
   <section>
-    <Container className={styles.container}>
+    <Container>
       <div className={styles.grid}>
         <div className={styles.copy}>
           <h1 className={styles.title}>Lorem ipsum dolor sit amet</h1>

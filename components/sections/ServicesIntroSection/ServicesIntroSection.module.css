@@ -1,7 +1,3 @@
-.container.container {
-  max-inline-size: 1116px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
