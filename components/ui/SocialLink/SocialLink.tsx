@@ -2,9 +2,9 @@ import { Instagram } from "@/icons/Instagram";
 import { Max } from "@/icons/Max";
 import { TG } from "@/icons/TG";
 
-import styles from "./FooterSocialLink.module.css";
+import styles from "./SocialLink.module.css";
 
-type FooterSocialLinkProps = {
+type SocialLinkProps = {
   socialType: "instagram" | "tg" | "max";
 };
 
@@ -26,7 +26,7 @@ const socials = {
   },
 };
 
-export const FooterSocialLink = ({ socialType }: FooterSocialLinkProps) => {
+export const SocialLink = ({ socialType }: SocialLinkProps) => {
   const social = socials[socialType];
   const Icon = social.icon;
 

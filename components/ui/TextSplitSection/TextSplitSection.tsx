@@ -4,6 +4,7 @@ import styles from "./TextSplitSection.module.css";
 
 type TextSplitSectionProps = {
   heading: string;
+  headingAs?: "h1" | "h2";
   title?: string;
   accent?: string;
   text?: string;
@@ -13,6 +14,7 @@ type TextSplitSectionProps = {
 
 export const TextSplitSection = ({
   heading,
+  headingAs: Heading = "h2",
   accent,
   title,
   text,
@@ -34,7 +36,7 @@ export const TextSplitSection = ({
 
   return (
     <div className={`${styles.wrapper} ${className ?? ""}`}>
-      {hasHeading && <h2 className={styles.heading}>{heading}</h2>}
+      {hasHeading && <Heading className={styles.heading}>{heading}</Heading>}
       {hasContent && (
         <div className={styles.content}>
           {(hasTitle || hasAccent) && (

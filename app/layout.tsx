@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat, Oswald, Raleway } from "next/font/google";
 
-import { Footer } from "@/components/layout/Footer/Footer";
 import { Header } from "@/components/layout/Header/Header";
 import LinesOverlay from "@/components/layout/LinesOverlay/LinesOverlay";
 import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
@@ -60,7 +59,6 @@ export default function RootLayout({
           <LinesOverlay />
           {children}
           <ScrollToTop/>
-          <Footer />
         </div>
       </body>
     </html>

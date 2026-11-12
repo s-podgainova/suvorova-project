@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { AnimatedLink } from "@/components/ui/AnimatedLink/AnimatedLink";
+import { SocialLink } from "@/components/ui/SocialLink/SocialLink";
 
 import { useClickOutside } from "@/hooks/useClickOutside";
 
@@ -67,7 +68,11 @@ export const SideMenu = ({ isOpen, onClose, burgerRef }: SideMenuProps) => {
         <Link href="mailto:info@suvorova-interior.ru">
           info@suvorova-interior.ru
         </Link>
-        <Link href="mailto:info@suvorova-interior.ru">Написать в MAX</Link>
+        <div className={styles.socialLinks}>
+          <SocialLink socialType="instagram" />
+          <SocialLink socialType="tg" />
+          <SocialLink socialType="max" />
+        </div>
       </div>
     </div>
   );

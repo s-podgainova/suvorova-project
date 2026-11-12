@@ -51,6 +51,16 @@
   border-block-start: var(--border);
 }
 
+.socialLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.socialLinks > a {
+  margin-inline-end: 0;
+}
+
 .contactLabel {
   margin-block-end: 12px;
   font-size: 12px;
