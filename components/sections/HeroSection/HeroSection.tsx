@@ -76,6 +76,7 @@ export const HeroSection = () => {
     >
       {slides.map((slide, index) => (
         <Image
+          unoptimized
           key={slide.title}
           src={slide.image}
           alt=""

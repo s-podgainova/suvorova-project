@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 
 import type { Project } from "@/types/project";
 
@@ -21,21 +21,18 @@ export const ProjectCard = ({
         <h3 className={styles.title}>{title}</h3>
       </div>
 
-      <div className={styles.imageWrapper}>
-        <Image
-          src={image}
-          alt={imageAlt}
-          fill
-          placeholder="blur"
-          className={styles.image}          
-          sizes="
+      <ExportedImage
+        src={image}
+        alt={imageAlt}
+        placeholder="blur"
+        className={styles.image}
+        sizes="
   (max-width: 320px) calc(100vw - 32px),
   (max-width: 768px) 90vw,
   (max-width: 1140px) calc(45vw - 30px),
   (max-width: 1280px) calc(540px - 5vw),
   476px"
-        />
-      </div>
+      />
     </Link>
   );
 };

@@ -47,6 +47,7 @@ export const Header = () => {
           <div className={styles.inner}>
             <Link href="/" className={styles.logo} aria-label="На главную">
               <Image
+                unoptimized
                 src="/images/LogoHeader.svg"
                 alt="Логоти Suvorova Interior"
                 width={250}

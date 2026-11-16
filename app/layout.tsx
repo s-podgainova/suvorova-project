@@ -1,30 +1,11 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Montserrat, Oswald, Raleway } from "next/font/google";
 
 import { Header } from "@/components/layout/Header/Header";
 import LinesOverlay from "@/components/layout/LinesOverlay/LinesOverlay";
 import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
 
 import "@/styles/globals.css";
-
-const montserrat = Montserrat({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-montserrat",
-});
-
-const oswald = Oswald({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
-  variable: "--font-oswald",
-});
-
-const raleway = Raleway({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
-  variable: "--font-raleway",
-});
 
 export const metadata: Metadata = {
   title: "Suvorova interiors",
@@ -51,9 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body
-        className={`${montserrat.variable} ${oswald.variable} ${raleway.variable}`}
-      >
+      <body>
         <div className="site">
           <Header />
           <LinesOverlay />

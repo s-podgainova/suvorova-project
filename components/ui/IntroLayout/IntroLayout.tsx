@@ -33,6 +33,7 @@ export const IntroLayout = ({
     <Container>
       <div className={reversed ? `${styles.grid} ${styles.reversed}` : styles.grid}>
         <Image
+          unoptimized
           className={styles.image}
           src={photo}
           alt={alt}
