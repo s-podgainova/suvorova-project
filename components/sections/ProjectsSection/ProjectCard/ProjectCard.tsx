@@ -11,7 +11,7 @@ export const ProjectCard = ({
   slug,
   type,
   title,
-  image,
+
   imageAlt,
 }: ProjectCardProps) => {
   return (
@@ -22,10 +22,12 @@ export const ProjectCard = ({
       </div>
 
       <ExportedImage
-        src={image}
+        src="https://storage.yandexcloud.net/suvorova-test-origin/test.jpg"
         alt={imageAlt}
         placeholder="blur"
         className={styles.image}
+        width={1000}
+        height={1333}
         sizes="
   (max-width: 320px) calc(100vw - 32px),
   (max-width: 768px) 90vw,

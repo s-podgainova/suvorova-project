@@ -18,6 +18,7 @@
 /out/
 **/nextImageExportOptimizer/
 /public/images/next-image-export-optimizer-hashes.json
+/remoteImagesForOptimization/
 
 # production
 /build

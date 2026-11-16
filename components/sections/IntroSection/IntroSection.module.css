@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.eyebrow {
+  composes: heading from "../../ui/TextSplitSection/TextSplitSection.module.css";
+}
+
+.copy .eyebrow {
+  inline-size: 100%;
+  padding-block-end: 0;
+  margin-block-start: 20px;
+  color: var(--color-heading);
+  border-block-end: 0;
+}
+
+.copy .eyebrow::before {
+  top: 50%;
+}
+
+.title {
+  padding-block-end: 24px;
+  font-size: clamp(1.75rem, 2.5vw, 2.125rem);
+  font-weight: 400;
+  line-height: 1.35;
+  border-block-end: 1px solid var(--color-accent);
+}
+
+.description {
+  margin-block-start: auto;
+  font-size: 17px;
+}
+
+.copy a {
+  align-self: flex-start;
+  margin-block-end: auto;
+}
+
+@media (width <= 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .description,
+  .copy a {
+    margin-block: 0;
+  }
+}
