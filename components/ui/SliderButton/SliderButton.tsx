@@ -9,6 +9,7 @@ export type SliderButtonProps = {
   variant: "light" | "dark";
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 };
 
 export const SliderButton = ({
@@ -16,6 +17,7 @@ export const SliderButton = ({
   variant,
   onClick,
   className = "",
+  disabled = false,
 }: SliderButtonProps) => {
   const label = direction === "prev" ? "Предыдущий слайд" : "Следующий слайд";
 
@@ -25,6 +27,7 @@ export const SliderButton = ({
       className={`${styles.button} ${styles[variant]} ${direction === "prev" ? styles.prev : ""} ${className}`.trim()}
       onClick={onClick}
       aria-label={label}
+      disabled={disabled}
     >
       <ArrowIcon />
     </button>

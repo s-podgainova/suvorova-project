@@ -3,7 +3,7 @@ import { Children, ReactNode } from "react";
 import styles from "./TextSplitSection.module.css";
 
 type TextSplitSectionProps = {
-  heading: string;
+  heading?: string;
   headingAs?: "h1" | "h2";
   title?: string;
   accent?: string;
@@ -21,7 +21,7 @@ export const TextSplitSection = ({
   children,
   className,
 }: TextSplitSectionProps) => {
-  const hasHeading = Boolean(heading.trim());
+  const hasHeading = Boolean(heading?.trim());
   const hasTitle = Boolean(title?.trim());
   const hasAccent = Boolean(accent?.trim());
   const hasText = Boolean(text?.trim());

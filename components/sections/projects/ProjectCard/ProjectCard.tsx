@@ -27,7 +27,7 @@ export const ProjectCard = ({
           alt={imageAlt}
           fill
           placeholder="blur"
-          className={styles.image}          
+          className={styles.image}
           sizes="
   (max-width: 320px) calc(100vw - 32px),
   (max-width: 768px) 90vw,

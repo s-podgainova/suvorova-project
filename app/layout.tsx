@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Montserrat, Oswald, Raleway } from "next/font/google";
+import localFont from "next/font/local";
 
 import { Header } from "@/components/layout/Header/Header";
 import LinesOverlay from "@/components/layout/LinesOverlay/LinesOverlay";
@@ -8,21 +8,21 @@ import ScrollToTop from "@/components/layout/ScrollToTop/ScrollToTop";
 
 import "@/styles/globals.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "600", "700"],
+const montserrat = localFont({
+  src: "../public/fonts/Montserrat-VariableFont_wght.woff2",
+  weight: "400 700",
   variable: "--font-montserrat",
 });
 
-const oswald = Oswald({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
+const oswald = localFont({
+  src: "../public/fonts/Oswald-VariableFont_wght.woff2",
+  weight: "400 700",
   variable: "--font-oswald",
 });
 
-const raleway = Raleway({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "700"],
+const raleway = localFont({
+  src: "../public/fonts/Raleway-VariableFont_wght.woff2",
+  weight: "400",
   variable: "--font-raleway",
 });
 

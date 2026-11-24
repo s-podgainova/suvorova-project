@@ -1,0 +1,101 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.image {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+}
+
+.thumbnail {
+  display: block;
+  inline-size: 100%;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.lightbox[open] {
+  --lightbox-inline-padding: clamp(24px, 4vw, 64px);
+
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  inline-size: 100vw;
+  block-size: 100dvh;
+  max-inline-size: none;
+  max-block-size: none;
+  padding-block: 48px;
+  padding-inline: var(--lightbox-inline-padding);
+  background: var(--color-bg);
+  border: 0;
+}
+
+.lightbox::backdrop {
+  background: var(--color-bg);
+}
+
+.viewer {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  gap: 16px;
+  align-items: center;
+  inline-size: 100%;
+}
+
+.singleViewer {
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+}
+
+.fullImage {
+  display: block;
+  inline-size: auto;
+  block-size: auto;
+  max-inline-size: 100%;
+  max-block-size: calc(100dvh - 96px);
+  object-fit: contain;
+  justify-self: center;
+  touch-action: pan-y;
+}
+
+.arrow {
+  justify-self: center;
+}
+
+.close {
+  position: absolute;
+  inset-block-start: 12px;
+  inset-inline-end: var(--lightbox-inline-padding);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  inline-size: 44px;
+  block-size: 44px;
+  padding: 0;
+  color: var(--color-heading);
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.close:hover {
+  color: var(--color-accent);
+}
+
+.closeIcon {
+  inline-size: 24px;
+  block-size: 24px;
+}
+
+@media (width < 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

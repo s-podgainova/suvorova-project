@@ -1,8 +1,7 @@
+import { ProjectsList } from "@/components/sections/projects/ProjectsList/ProjectsList";
 import { ButtonLink } from "@/components/ui/ButtonLink/ButtonLink";
 import { Container } from "@/components/ui/Container/Container";
 import { TextSplitSection } from "@/components/ui/TextSplitSection/TextSplitSection";
-
-import { ProjectsList } from "./ProjectsList/ProjectsList";
 
 import styles from "./ProjectsSection.module.css";
 
