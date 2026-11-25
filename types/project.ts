@@ -4,6 +4,7 @@ export type Project = {
   slug: string;
   type: string;
   title: string;
+  featureOrder?: number;
   area: string;
   location: string;
   image: StaticImageData;

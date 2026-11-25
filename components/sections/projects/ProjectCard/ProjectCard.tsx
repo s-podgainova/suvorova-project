@@ -5,7 +5,9 @@ import type { Project } from "@/types/project";
 
 import styles from "./ProjectCard.module.css";
 
-type ProjectCardProps = Project;
+type ProjectCardProps = Project & {
+  variant: "home" | "catalog";
+};
 
 export const ProjectCard = ({
   slug,
@@ -13,9 +15,10 @@ export const ProjectCard = ({
   title,
   image,
   imageAlt,
+  variant,
 }: ProjectCardProps) => {
   return (
-    <Link className={styles.card} href={`/projects/${slug}`}>
+    <Link className={`${styles.card} ${variant === "catalog" ? styles.catalog : ""}`} href={`/projects/${slug}`}>
       <div className={styles.description}>
         <p className={styles.type}>{type}</p>
         <h3 className={styles.title}>{title}</h3>

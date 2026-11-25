@@ -1,15 +1,21 @@
 import { ProjectCard } from "@/components/sections/projects/ProjectCard/ProjectCard";
 
-import { projects } from "./projectsData";
-
 import styles from "./ProjectsList.module.css";
 
-export const ProjectsList = () => {
+import { Project } from "@/types/project";
+
+
+type ProjectsListProps = {
+  projects: Project[];
+  variant: "home" | "catalog";
+}
+
+export const ProjectsList = ({ projects, variant }: ProjectsListProps) => {
   return (
-    <ul className={styles.projectsList}>
+    <ul className={`${styles.projectsList} ${variant === "catalog" ? styles.catalog : ""}`}>
       {projects.map((project) => (
         <li key={project.slug}>
-          <ProjectCard {...project} />
+          <ProjectCard {...project} variant={variant} />
         </li>
       ))}
     </ul>

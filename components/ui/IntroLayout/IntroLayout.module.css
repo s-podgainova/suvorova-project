@@ -8,6 +8,15 @@
   .reversed .image {
     order: 1;
   }
+
+  .reversed .copy {
+    justify-content: center;
+  }
+
+  .reversed .description,
+  .reversed .copy a {
+    margin-block: 0;
+  }
 }
 
 .image {
@@ -51,6 +60,12 @@
 .copy a {
   align-self: flex-start;
   margin-block-end: auto;
+}
+
+@media (width <= 960px) {
+  .reversed .description {
+    font-size: 16px;
+  }
 }
 
 @media (width <= 768px) {

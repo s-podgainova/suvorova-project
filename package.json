@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint . --fix",
+    "lint:imports": "eslint . --fix --config eslint.imports.config.mjs",
     "lint:css": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {

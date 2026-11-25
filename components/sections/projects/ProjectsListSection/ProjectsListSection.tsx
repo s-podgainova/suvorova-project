@@ -2,12 +2,14 @@ import { ProjectsList } from "@/components/sections/projects/ProjectsList/Projec
 import { Container } from "@/components/ui/Container/Container";
 import { TextSplitSection } from "@/components/ui/TextSplitSection/TextSplitSection";
 
+import { projects } from "../ProjectsList/projectsData";
+
 export const ProjectsListSection = () => {
   return (
     <section>
       <Container>
         <TextSplitSection />
-        <ProjectsList />
+        <ProjectsList projects={projects} variant="catalog" />
       </Container>
     </section>
   );

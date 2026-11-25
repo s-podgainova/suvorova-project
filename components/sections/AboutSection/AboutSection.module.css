@@ -39,12 +39,6 @@
   flex-direction: column;
 }
 
-@media (width <= 960px) {
-  .inner {
-    flex-direction: column-reverse;
-  }
-}
-
 .title {
   font-size: 36px;
   font-weight: 500;

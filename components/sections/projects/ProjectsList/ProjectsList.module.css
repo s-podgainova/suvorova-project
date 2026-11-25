@@ -5,8 +5,17 @@
   margin-block-start: 40px;
 }
 
+.catalog {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
 @media (width <= 768px) {
   .projectsList {
     grid-template-columns: 1fr;
+  }
+
+  .catalog {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

@@ -4,6 +4,11 @@
   gap: 8px;
 }
 
+.catalog {
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -34,6 +39,10 @@
   letter-spacing: 1px;
 }
 
+.catalog .type {
+  display: none;
+}
+
 .title {
   position: relative;
   margin-block-end: 24px;
@@ -43,10 +52,29 @@
   letter-spacing: 0.5px;
 }
 
+.catalog .title {
+  margin-block-end: 16px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.catalog .title::after {
+  bottom: -9px;
+}
+
 @media (width <= 768px) {
   .title {
     margin-block-end: 16px;
     font-size: 1.375rem;
+  }
+
+  .catalog .title {
+    margin-block-end: 14px;
+    font-size: 0.875rem;
+    line-height: 1.35;
   }
 
   .card {

@@ -8,7 +8,7 @@ export const ServicesIntroSection = () => (
     alt="Services"
     eyebrow="Услуги · Стоимость · Этапы работы"
     title={<>Каждой идее&nbsp;&mdash; своё воплощение</>}
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    description="Каждый интерьер индивидуален, как и запрос человека, для которого он создаётся. Кому-то нужна помощь в принятии отдельных решений, кому-то — профессиональное сопровождение на всех этапах. Поэтому я предлагаю разные форматы работы, исходя из ваших потребностей."
     href="/contacts"
     linkLabel="Контакты"
     reversed

@@ -11,10 +11,10 @@ export const AboutSection = () => {
     <section className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.inner}>
+          <h2 className={styles.heading}>обо мне</h2>
           <p className={styles.title}>
             Софья-Мария <span className={styles.accent}>Суворова</span>
           </p>
-          <h2 className={styles.heading}>обо мне</h2>{" "}
         </div>
         <div className={styles.text}>
           <p>

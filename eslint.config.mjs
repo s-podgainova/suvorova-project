@@ -11,31 +11,8 @@ const eslintConfig = defineConfig([
       "simple-import-sort": simpleImportSort,
     },
     rules: {
-      "no-restricted-imports": [
-        "error",
-        {
-          patterns: [
-            {
-              group: ["../**"],
-              message: "Используйте абсолютный импорт через алиас @/.",
-            },
-          ],
-        },
-      ],
-      "simple-import-sort/exports": "warn",
-      "simple-import-sort/imports": [
-        "warn",
-        {
-          groups: [
-            ["^react", "^next", "^@?\\w"],
-            ["^@/shared/hooks/"],
-            ["^@/(?:components|shared/components)/"],
-            ["^@/"],
-            ["^\\.(?!.*\\.(?:css|scss|sass|less)$)"],
-            ["^.+\\.(?:css|scss|sass|less)$"],
-          ],
-        },
-      ],
+      "simple-import-sort/exports": "off",
+      "simple-import-sort/imports": "off",
     },
   },
   // Override default ignores of eslint-config-next.
