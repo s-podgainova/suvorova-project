@@ -43,7 +43,7 @@
 
 @media (hover: none) {
   .allProjects {
-    border-bottom: 1px solid currentcolor;
+    border-bottom: 1px solid var(--color-accent);
   }
 }
 
