@@ -89,8 +89,18 @@
   background-color: #eeeae5;
 }
 
+.catalog .imageWrapper {
+  aspect-ratio: 3 / 4;
+}
+
 .image {
   object-fit: cover;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .catalog .title::after {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
