@@ -31,16 +31,6 @@
     transform 200ms ease;
 }
 
-.button:not(:disabled):hover {
-  color: var(--slider-button-hover-color);
-  background-color: var(--slider-button-hover-background);
-  transform: scale(0.9);
-}
-
-.button:not(:disabled):active {
-  transform: scale(0.9);
-}
-
 .button:disabled {
   cursor: default;
   opacity: 0.3;
@@ -49,6 +39,16 @@
 .button:focus-visible {
   outline: 2px solid currentcolor;
   outline-offset: 3px;
+}
+
+.button:not(:disabled):hover {
+  color: var(--slider-button-hover-color);
+  background-color: var(--slider-button-hover-background);
+  transform: scale(0.9);
+}
+
+.button:not(:disabled):active {
+  transform: scale(0.9);
 }
 
 .prev svg {
