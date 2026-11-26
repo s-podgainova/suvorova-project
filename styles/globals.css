@@ -137,7 +137,8 @@ a:hover {
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .pswp.project-gallery-lightbox .pswp__button--arrow {
+  .pswp.project-gallery-lightbox .pswp__button--arrow,
+  .pswp.project-gallery-lightbox .pswp__button--zoom {
     display: none;
   }
 }
