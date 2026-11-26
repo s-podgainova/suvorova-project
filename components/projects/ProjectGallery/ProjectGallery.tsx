@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
@@ -57,13 +57,13 @@ export const ProjectGallery = ({ images }: ProjectGalleryProps) => {
         <li key={index}>
           <a
             className={styles.thumbnail}
-            href={photo.src.src}
+            href={typeof photo.src === "string" ? photo.src : photo.src.src}
             aria-label={`Открыть фотографию ${index + 1}`}
-            data-pswp-src={photo.src.src}
-            data-pswp-width={photo.src.width}
-            data-pswp-height={photo.src.height}
+            data-pswp-src={typeof photo.src === "string" ? photo.src : photo.src.src}
+            data-pswp-width={"width" in photo ? photo.width : photo.src.width}
+            data-pswp-height={"height" in photo ? photo.height : photo.src.height}
           >
-            <Image
+            <ExportedImage
               className={styles.image}
               src={photo.src}
               alt={photo.alt ?? ""}

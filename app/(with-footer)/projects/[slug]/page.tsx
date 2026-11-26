@@ -1,6 +1,6 @@
-import { projects } from "@/components/sections/projects/ProjectsList/projectsData";
-import { ProjectGallery } from "@/components/sections/projects/ProjectGallery/ProjectGallery";
+import { ProjectGallery } from "@/components/projects/ProjectGallery/ProjectGallery";
 import { Container } from "@/components/ui/Container/Container";
+import { projects } from "@/data/projects/projectsData";
 
 import styles from "./page.module.css";
 

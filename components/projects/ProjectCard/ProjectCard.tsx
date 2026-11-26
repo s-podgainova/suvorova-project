@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 
 import type { Project } from "@/types/project";
 
@@ -13,8 +13,8 @@ export const ProjectCard = ({
   slug,
   type,
   title,
-  image,
-  imageAlt,
+  cover,
+  coverAlt,
   variant,
 }: ProjectCardProps) => {
   return (
@@ -25,11 +25,10 @@ export const ProjectCard = ({
       </div>
 
       <div className={styles.imageWrapper}>
-        <Image
-          src={image}
-          alt={imageAlt}
+        <ExportedImage
+          src={cover}
+          alt={coverAlt}
           fill
-          placeholder="blur"
           className={styles.image}
           sizes="
   (max-width: 320px) calc(100vw - 32px),

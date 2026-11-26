@@ -7,10 +7,10 @@ export type Project = {
   featureOrder?: number;
   area: string;
   location: string;
-  image: StaticImageData;
-  imageAlt: string;
-  gallery: {
-    src: StaticImageData;
-    alt?: string;
-  }[];
+  cover: StaticImageData | string;
+  coverAlt: string;
+  gallery: (
+    | { src: StaticImageData; alt?: string }
+    | { src: string; width: number; height: number; alt?: string }
+  )[];
 };

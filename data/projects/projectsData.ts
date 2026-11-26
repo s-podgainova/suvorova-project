@@ -1,9 +1,10 @@
 import composerPhoto from "@/public/images/projects/composer.webp";
 import gloraPhoto from "@/public/images/projects/glora1.webp";
 import marinePhoto from "@/public/images/projects/marine.jpg";
-import mistolaPhoto from "@/public/images/projects/mistola.webp";
 import mistolaPhotoJPG from "@/public/images/projects/mistola.jpg";
 import { Project } from "@/types/project";
+
+import { cover as mistolaCover, gallery as mistolaGallery } from "./mistolaImages";
 
 export const projects: Project[] = [
   {
@@ -13,9 +14,9 @@ export const projects: Project[] = [
     featureOrder: 1,
     area: "97 м²",
     location: "Санкт-Петербург",
-    image: mistolaPhoto,
-    imageAlt: "ЖК Мистола Хилз",
-    gallery: [{ src: mistolaPhoto }, { src: mistolaPhotoJPG }, { src: gloraPhoto}, { src: composerPhoto }],
+    cover: mistolaCover,
+    coverAlt: "ЖК Мистола Хилз",
+    gallery: mistolaGallery,
   },
   {
     slug: "glorax-vasileostrovsky",
@@ -24,8 +25,8 @@ export const projects: Project[] = [
     featureOrder: 2,
     area: "39 м²",
     location: "Санкт-Петербург",
-    image: mistolaPhotoJPG,
-    imageAlt: "ЖК GloraX Василеостровский",
+    cover: mistolaPhotoJPG,
+    coverAlt: "ЖК GloraX Василеостровский",
     gallery: [{ src: gloraPhoto }],
   },
   {
@@ -35,8 +36,8 @@ export const projects: Project[] = [
     featureOrder: 3,
     area: "26 м²",
     location: "Санкт-Петербург",
-    image: composerPhoto,
-    imageAlt: "Улица Композиторов",
+    cover: composerPhoto,
+    coverAlt: "Улица Композиторов",
     gallery: [{ src: composerPhoto }],
   },
   {
@@ -46,8 +47,8 @@ export const projects: Project[] = [
     featureOrder: 4,
     area: "67 м²",
     location: "Санкт-Петербург",
-    image: marinePhoto,
-    imageAlt: "ЖК Морская Набережная",
+    cover: marinePhoto,
+    coverAlt: "ЖК Морская Набережная",
     gallery: [{ src: marinePhoto }],
   },
     {
@@ -56,8 +57,8 @@ export const projects: Project[] = [
     title: "ЖК GloraX",
     area: "73 м²",
     location: "Санкт-Петербург",
-    image: marinePhoto,
-    imageAlt: "ЖК GloraX",
+    cover: marinePhoto,
+    coverAlt: "ЖК GloraX",
     gallery: [{ src: marinePhoto }],
   },
 ];

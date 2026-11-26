@@ -7,8 +7,8 @@ const nextConfig: NextConfig = {
   images: {
     loader: "custom",
     loaderFile: "./staticImagePassthroughLoader.ts",
-    imageSizes: [256, 384],
-    deviceSizes: [640, 960, 1280, 1920],
+    imageSizes: [384],
+    deviceSizes: [640, 960, 1280],
   },
   transpilePackages: ["next-image-export-optimizer"],
   env: {

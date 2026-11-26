@@ -1,4 +1,4 @@
-import { ProjectCard } from "@/components/sections/projects/ProjectCard/ProjectCard";
+import { ProjectCard } from "@/components/projects/ProjectCard/ProjectCard";
 
 import styles from "./ProjectsList.module.css";
 
