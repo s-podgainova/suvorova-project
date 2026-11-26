@@ -85,12 +85,8 @@
 .imageWrapper {
   position: relative;
   inline-size: 100%;
-  aspect-ratio: 9 / 10;
-  background-color: #eeeae5;
-}
-
-.catalog .imageWrapper {
   aspect-ratio: 3 / 4;
+  background-color: #eeeae5;
 }
 
 .image {

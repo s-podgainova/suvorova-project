@@ -43,10 +43,6 @@
   border-block-end: 0;
 }
 
-.copy .eyebrow::before {
-  top: 50%;
-}
-
 .title {
   padding-block-end: 24px;
   border-block-end: 1px solid var(--color-accent);

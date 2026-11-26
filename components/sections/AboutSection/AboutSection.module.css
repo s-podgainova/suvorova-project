@@ -56,14 +56,14 @@
   font-family: var(--font-montserrat), system-ui, sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: var(--color-accent);
+  color: var(--color-heading);
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
 .heading::before {
   position: absolute;
-  top: 50%;
+  top: 13px;
   left: 0;
   width: 5px;
   height: 5px;
