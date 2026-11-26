@@ -49,3 +49,102 @@ a:hover {
   flex-direction: column;
   min-height: 100vh;
 }
+
+.pswp.project-gallery-lightbox {
+  --pswp-bg: var(--color-bg);
+  --pswp-icon-color: var(--color-heading);
+  --pswp-icon-color-secondary: var(--color-bg);
+}
+
+/* stylelint-disable selector-class-pattern -- классы интерфейса PhotoSwipe */
+.pswp.project-gallery-lightbox .pswp__icn-shadow {
+  display: none;
+}
+
+.pswp.project-gallery-lightbox .pswp__counter {
+  text-shadow: none;
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow {
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  opacity: 1;
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow--prev {
+  left: clamp(24px, 4vw, 64px);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow--next {
+  right: clamp(24px, 4vw, 64px);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow .pswp__icn {
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: 0;
+  color: var(--color-accent);
+  transform: translate(-50%, -50%);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow--next .pswp__icn {
+  right: auto;
+  transform: translate(-50%, -50%) scaleX(-1);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--close {
+  width: 44px;
+  height: 44px;
+  margin-top: 12px;
+  margin-right: clamp(24px, 4vw, 64px);
+  opacity: 1;
+}
+
+.pswp.project-gallery-lightbox .pswp__button--close .pswp__icn {
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  color: var(--color-heading);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--close:hover .pswp__icn {
+  color: var(--color-accent);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow:hover {
+  background-color: var(--color-accent);
+  transform: scale(0.9);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow:hover .pswp__icn {
+  color: var(--white);
+}
+
+.pswp.project-gallery-lightbox .pswp__button--arrow:focus-visible,
+.pswp.project-gallery-lightbox .pswp__button--close:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .pswp.project-gallery-lightbox .pswp__button--arrow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pswp.project-gallery-lightbox .pswp__button--arrow {
+    transition: none;
+  }
+}
+/* stylelint-enable selector-class-pattern */
