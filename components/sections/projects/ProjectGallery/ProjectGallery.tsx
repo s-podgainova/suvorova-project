@@ -45,6 +45,7 @@ export const ProjectGallery = ({ images }: ProjectGalleryProps) => {
                 className={styles.image}
                 src={photo.src}
                 alt={photo.alt ?? ""}
+                fill
                 sizes="(max-width: 767px) calc((90vw - 20px) / 2), calc((90vw - 40px) / 3)"
               />
             </button>
@@ -92,43 +93,46 @@ export const ProjectGallery = ({ images }: ProjectGalleryProps) => {
                 }
               />
             )}
-            <Image
-              className={styles.fullImage}
-              src={activePhoto.src}
-              alt={activePhoto.alt ?? ""}
-              sizes="100vw"
-              onPointerDown={(event) => {
-                pointerStartRef.current = {
-                  x: event.clientX,
-                  y: event.clientY,
-                };
-              }}
-              onPointerUp={(event) => {
-                const start = pointerStartRef.current;
-                if (start === null) return;
-                pointerStartRef.current = null;
+            <div className={styles.photoFrame}>
+              <Image
+                className={styles.fullImage}
+                src={activePhoto.src}
+                alt={activePhoto.alt ?? ""}
+                fill
+                sizes="100vw"
+                onPointerDown={(event) => {
+                  pointerStartRef.current = {
+                    x: event.clientX,
+                    y: event.clientY,
+                  };
+                }}
+                onPointerUp={(event) => {
+                  const start = pointerStartRef.current;
+                  if (start === null) return;
+                  pointerStartRef.current = null;
 
-                const deltaX = event.clientX - start.x;
-                const deltaY = event.clientY - start.y;
-                const swipeThreshold = 50;
+                  const deltaX = event.clientX - start.x;
+                  const deltaY = event.clientY - start.y;
+                  const swipeThreshold = 50;
 
-                if (
-                  Math.abs(deltaX) > swipeThreshold &&
-                  Math.abs(deltaX) > Math.abs(deltaY)
-                ) {
-                  if (deltaX < 0) {
-                    setActiveIndex((activeIndex + 1) % images.length);
-                  } else {
-                    setActiveIndex(
-                      (activeIndex - 1 + images.length) % images.length,
-                    );
+                  if (
+                    Math.abs(deltaX) > swipeThreshold &&
+                    Math.abs(deltaX) > Math.abs(deltaY)
+                  ) {
+                    if (deltaX < 0) {
+                      setActiveIndex((activeIndex + 1) % images.length);
+                    } else {
+                      setActiveIndex(
+                        (activeIndex - 1 + images.length) % images.length,
+                      );
+                    }
                   }
-                }
-              }}
-              onPointerCancel={() => {
-                pointerStartRef.current = null;
-              }}
-            />
+                }}
+                onPointerCancel={() => {
+                  pointerStartRef.current = null;
+                }}
+              />
+            </div>
             {images.length > 1 && (
               <SliderButton
                 className={styles.arrow}

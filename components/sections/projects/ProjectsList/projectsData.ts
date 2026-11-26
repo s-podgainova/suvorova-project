@@ -2,6 +2,7 @@ import composerPhoto from "@/public/images/projects/composer.webp";
 import gloraPhoto from "@/public/images/projects/glora1.webp";
 import marinePhoto from "@/public/images/projects/marine.jpg";
 import mistolaPhoto from "@/public/images/projects/mistola.webp";
+import mistolaPhotoJPG from "@/public/images/projects/mistola.jpg";
 import { Project } from "@/types/project";
 
 export const projects: Project[] = [
@@ -14,7 +15,7 @@ export const projects: Project[] = [
     location: "Санкт-Петербург",
     image: mistolaPhoto,
     imageAlt: "ЖК Мистола Хилз",
-    gallery: [{ src: mistolaPhoto }, { src: gloraPhoto}, { src: composerPhoto }],
+    gallery: [{ src: mistolaPhoto }, { src: mistolaPhotoJPG }, { src: gloraPhoto}, { src: composerPhoto }],
   },
   {
     slug: "glorax-vasileostrovsky",
@@ -23,7 +24,7 @@ export const projects: Project[] = [
     featureOrder: 2,
     area: "39 м²",
     location: "Санкт-Петербург",
-    image: gloraPhoto,
+    image: mistolaPhotoJPG,
     imageAlt: "ЖК GloraX Василеостровский",
     gallery: [{ src: gloraPhoto }],
   },
