@@ -1,0 +1,61 @@
+name: Deploy test site to Yandex Object Storage
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-test-site
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=dev
+
+      - name: Build static site and optimize images
+        run: npm run build:images
+
+      - name: Verify static export
+        run: |
+          test -s out/index.html
+          test -s out/projects/index.html
+          test -s out/404.html
+
+      - name: Sync site files to test bucket
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+        run: |
+          aws --version
+          aws --endpoint-url=https://storage.yandexcloud.net \
+            s3 sync out/ s3://suvorova-test-site/ \
+            --delete --no-progress
+
+      - name: Configure static website and 404 page
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.YC_S3_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.YC_S3_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ru-central1
+        run: |
+          aws --endpoint-url=https://storage.yandexcloud.net \
+            s3 website s3://suvorova-test-site/ \
+            --index-document index.html \
+            --error-document 404.html
